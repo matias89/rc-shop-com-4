@@ -4,23 +4,10 @@ const view = (shop => {
         const hw = shop.testMethod(); // M<ethod from 'shop' module
         console.log(hw);
     }
-    const createElement = (element, id, className, text, type, placeholder, src) => {
-        const elm = document.createElement(element);
-        elm.id = id;
-        elm.className = className;
-        elm.innerText = text;
-        elm.type = type;
-        elm.placeholder = placeholder
-        elm.src = src;
-        return elm
-    }
-    const showElement = (elementId) => {
-        const id = document.getElementById(elementId);
-        const element1 = createElement('div', 'boxdiv', 'container')
-        const element = createElement('input','input_1', 'form-control', '', 'date', '', '');
-        element1.appendChild(element)
-        id.appendChild(element1);
-
+    const showElement = (fatherId, tag, elementId, className, text, type, placeholder, src) => {
+        const id = document.getElementById(fatherId);
+        const element = shop.createElement(tag, elementId, className, text, type, placeholder, src);
+        id.appendChild(element);
     }
     return {
         showElement,
@@ -29,5 +16,7 @@ const view = (shop => {
 })(shop);
 
 view.testMethod();
-view.showElement('main')
+view.showElement('main', 'button','btn_1', 'btn btn-secondary m-4', 'Click me', 'button', '', '')
+view.showElement('main', 'p','p_1', 'text-success m-4', 'Hello friend...', '', '', '')
+view.showElement('main', 'img','img_1', '', '', '', '', 'https://www.gamepals.co/53-large_default/gafas-de-sol-new-balance-livianas-y-resistentes-al-impacto.jpg')
 
