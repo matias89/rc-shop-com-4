@@ -21,8 +21,7 @@ const view = (shop => {
             });
         } else {            
             spinnerblock.className ='spinner-border d-none';
-        }       
-        
+        }    
     }
 
     const timer = () => {       
