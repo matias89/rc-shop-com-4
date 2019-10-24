@@ -2,34 +2,45 @@ const shop = (() => {
     const testMethod = () => {
         return 'Hello World!';
     }
-    const product = {
+    const products = [{
         title: 'Leche',
+        brand: 'Serenísima',
         id: '1',
         size: '1 litro',
         number: '1'
-    };
-    const addProduct = () => {
+    },
+    {
+        title: 'Aceite',
+        brand: 'Cocinero',
+        id: '2',
+        size: '1 litro',
+        number: '2'
+    }
+    ];
+    const addProduct = (product, number) => {
         const formatToSave = JSON.stringify(product);
-        localStorage.setItem('Product', formatToSave);
+        localStorage.setItem('Products', formatToSave);
     }
     const removeProduct = (product) => {
-        const info = localStorage.clear(product);
+        localStorage.clear(product);
     }
     const editProduct = (key, newValue) => {
         const info = localStorage.getItem('product');
         const data = JSON.parse(info);
-        data.key = newValue;
-        localStorage.setItem( 'product', data.key = newValue )
+        let a = data.key; 
+        localStorage.setItem( 'product', a = newValue )
     }
     return {
         addProduct,
         editProduct,
         testMethod,
-        removeProduct
+        removeProduct,
+        products
     }
 })();
-shop.addProduct();
+shop.addProduct(shop.products);
+// shop.addProduct(shop.products[1], '2');
 setTimeout(() => {
-    shop.removeProduct('product')
-    // shop.editProduct('title', 'pan');    
-}, 3000);
+    shop.removeProduct();
+    // shop.editProduct(shop.products[0]+'title', 'pan');    
+ }, 3000);
