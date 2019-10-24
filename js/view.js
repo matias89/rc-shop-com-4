@@ -29,18 +29,11 @@ const view = (shop => {
         }
         return elm
     }
-    showElement = () => {
-        let a = document.getElementById('main');
-        let show = createElement('div', 'div_01', 'container', '<span>Hello friend...</span>', false, false, false, 'block')
-        a.appendChild(show);
-    }
     return {
-        showElement,
         testMethod
     }
 })(shop);
 
 view.testMethod();
-view.showElement();
 
 
