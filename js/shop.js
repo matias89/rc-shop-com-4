@@ -2,24 +2,19 @@ const shop = (() => {
     const testMethod = () => {
         return 'Hello World!';
     }
-    const products = [{
-        title: 'Leche',
-        brand: 'Serenísima',
-        id: '1',
-        size: '1 litro',
-        number: '1'
-    },
-    {
-        title: 'Aceite',
-        brand: 'Cocinero',
-        id: '2',
-        size: '1 litro',
-        number: '2'
+    const prod = () => {
+        let milk = {
+            title: 'Leche',
+            Price: '10 pesos',
+            id: '1'
+        }
+        return milk
     }
-    ];
-    const addProduct = (product, number) => {
+    const addProduct = (key, product) => {
         const formatToSave = JSON.stringify(product);
-        localStorage.setItem('Products', formatToSave);
+        // console.log('test', formatToSave);
+        localStorage.setItem(key, formatToSave);
+        // console.log('test2', JSON.parse(formatToSave));
     }
     const removeProduct = (product) => {
         localStorage.clear(product);
@@ -31,16 +26,19 @@ const shop = (() => {
         localStorage.setItem( 'product', a = newValue )
     }
     return {
+        prod,
         addProduct,
         editProduct,
         testMethod,
         removeProduct,
-        products
     }
 })();
-shop.addProduct(shop.products);
+
+shop.addProduct('Leche', shop.prod());
+console.log('Leche', shop.prod())
+shop.addProduct('Sony TV', shop.prod());
 // shop.addProduct(shop.products[1], '2');
-setTimeout(() => {
-    shop.removeProduct();
-    // shop.editProduct(shop.products[0]+'title', 'pan');    
- }, 3000);
+// setTimeout(() => {
+//     shop.removeProduct('Leche');
+//     // shop.editProduct(shop.products[0]+'title', 'pan');    
+//  }, 3000);
