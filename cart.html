@@ -9,6 +9,35 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+
+        <!-- Button trigger modal -->
+        <button type="button" id="btn-finish" class="btn btn-primary d-inline-block" onclick="view.runSpinner(true);" >
+            Finalizar Compra
+        </button> 
+        <!--spinner-->
+        <div class="spinner-border d-none" id="spinner" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rolling Shop</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-msg">                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="view.goPage();">Aceptar</button>
+                </div>
+                </div>
+            </div>
+        </div>       
+
+
     <script type="text/javascript" src="./js/shop.js"></script>
     <script type="text/javascript" src="./js/view.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
