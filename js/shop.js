@@ -15,7 +15,7 @@ const shop = (() => {
             item.title = title,
             item.price = price,
             item.quantity = quantity,
-            item.key = Math.floor(Math.random() * 9999) + id + title
+            item.key = /*Math.floor(Math.random() * 9999) +*/ id + title
         ];
             return item;
     }
