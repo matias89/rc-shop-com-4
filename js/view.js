@@ -12,12 +12,13 @@ const view = (shop => {
         if (activeSpinner) {
             spinnerblock.className ='spinner-border d-inline-block';            
             const t2 = timer();
-            t2.then(x => {              
+            t2.then(numRnd => {              
               view.runSpinner(false);
               const ms = document.getElementById('modal-msg');
-              ms.innerText = getMSG(x);
+              ms.innerText = getMSG(numRnd);
               $('#exampleModal').modal('show')
               btnfinish.disabled = false;
+              localStorage.setItem('finishPurchase', numRnd);
             });
         } else {            
             spinnerblock.className ='spinner-border d-none';
@@ -48,6 +49,13 @@ const view = (shop => {
         return msg;
     }
 
+    const goPage = () =>{
+        const statusPurchase = localStorage.getItem('finishPurchase');
+        if (statusPurchase === '1') {
+            window.location="./index.html";
+        }
+    } 
+
     const createElement = (element, id, className, html, type, placeholder, src, display) => {
         const elm = document.createElement(element);
         if (id) {
@@ -77,6 +85,7 @@ const view = (shop => {
     return {
          testMethod
         ,runSpinner
+        ,goPage
     }
 
 })(shop);

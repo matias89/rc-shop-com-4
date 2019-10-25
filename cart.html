@@ -10,10 +10,10 @@
 </head>
 <body>
 
-        <!-- Button trigger modal
+        <!-- Button trigger modal -->
         <button type="button" id="btn-finish" class="btn btn-primary d-inline-block" onclick="view.runSpinner(true);" >
             Finalizar Compra
-        </button> -->
+        </button> 
         <!--spinner-->
         <div class="spinner-border d-none" id="spinner" role="status">
             <span class="sr-only">Loading...</span>
@@ -31,7 +31,7 @@
                 <div class="modal-body" id="modal-msg">                   
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="view.goPage();">Aceptar</button>
                 </div>
                 </div>
             </div>
