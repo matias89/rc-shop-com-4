@@ -3,11 +3,21 @@ const shop = (() => {
         return 'Hello World!';
     }
     const prod = () => {
-        let milk = {
+        let milk = [{
             title: 'Leche',
             Price: '10 pesos',
             id: '1'
-        }
+        },
+        {
+            title: 'Aceite',
+            Price: '10 pesos',
+            id: '1'
+        },
+        {
+            title: 'Azucar',
+            Price: '10 pesos',
+            id: '1'
+        }]
         return milk
     }
     const addProduct = (key, product) => {
@@ -34,9 +44,17 @@ const shop = (() => {
     }
 })();
 
-shop.addProduct('Leche', shop.prod());
-console.log('Leche', shop.prod())
-shop.addProduct('Sony TV', shop.prod());
+shop.addProduct('Products', shop.prod());
+const prod = localStorage.getItem('Products');
+const productos = JSON.parse(prod);
+productos.push({
+    title: 'Mate',
+    Price: '10 pesos',
+    id: '1'
+})
+console.log(productos[3])
+
+// shop.addProduct('Sony TV', shop.prod());
 // shop.addProduct(shop.products[1], '2');
 // setTimeout(() => {
 //     shop.removeProduct('Leche');
