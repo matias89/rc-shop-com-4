@@ -118,7 +118,7 @@ const view = (shop => {
         return newCard;         
     }
 
-    const createShop = () => {
+    const renderShop = () => {
         const shop = document.getElementById('shop');
         shop.className = 'container';
         const row = createElement('div', false, 'row my-2');
@@ -159,12 +159,12 @@ const view = (shop => {
          testMethod
         ,runSpinner
         ,goPage
-        ,createShop
+        ,renderShop
     }
 
 })(shop);
 
 view.testMethod();
-view.createShop();
+view.renderShop();
 
 
