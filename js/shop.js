@@ -1,25 +1,17 @@
 const shop = (() => {
     //Funcion para agregar los productos al carrito 
-    const addToCart = (id, title, price, quantity) => {
+    const addToCart = (_id, _title, _price, _quantity) => {
         
-        const item = cartItem(id, title, price, quantity);
-        const toLocalStorage = JSON.stringify(item);
-
-        localStorage.setItem(item.key, toLocalStorage);
+        const item = new Object();
+            item.id = _id;
+            item.title = _title;
+            item.price = _price;
+            item.quantity = _quantity;
+            item.key = _id + _title;
+        
+        localStorage.setItem(item.key, JSON.stringify(item));
     }
-    
-    //asigna el item a una variable para poder utilizarla luego y le asigna una key
-    const cartItem = (id, title, price, quantity) => {
-        const item = [
-            item.id = id,
-            item.title = title,
-            item.price = price,
-            item.quantity = quantity,
-            item.key = /*Math.floor(Math.random() * 9999) +*/ id + title
-        ];
-            return item;
-    }
-
+    console.log(addToCart(123, "qwe", 123, 12));
     // Modifica los productos en el carrito
     const modifyFromCart = () => {
 
