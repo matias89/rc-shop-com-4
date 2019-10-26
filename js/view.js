@@ -81,15 +81,56 @@ const view = (shop => {
         }
         return elm
     }
-    
+
+    const createCardHor = (title, srcImg, price  ) => {
+        const newCardH = createElement('div', false, 'card mb-3');
+        const newRow = createElement('div', false, 'row no-gutters');
+        const newCol1 = createElement('div', false, 'col-md-4');
+        const newCol2 = createElement('div', false, 'col-md-8');
+        const newImg = createElement('img', false, 'card-img-top', false, false, false, srcImg);
+        const newCardBody = createElement('div', false, 'card-body');
+        const newTitle = createElement('h5', false, 'card-title', title);
+        const newprice = createElement('h3', false, 'card-text', price);
+        newCol1.appendChild(newImg);
+        newCardBody.appendChild(newTitle);
+        newCardBody.appendChild(newprice);
+        newCol2.appendChild(newCardBody);
+        newRow.appendChild(newCol1);
+        newRow.appendChild(newCol2);
+        newCardH.appendChild(newRow);        
+        return newCardH;       
+    }
+
+    const createCard = (title, srcImg, price  ) => {
+        const newCard = createElement('div', false, 'card');
+        const newImg = createElement('img', false, 'card-img-top', false, false, false, srcImg);
+        const newCardBody = createElement('div', false, 'card-body');
+        const newTitle = createElement('h5', false, 'card-title', title);
+        const newprice = createElement('h3', false, 'card-text', price);
+        newCard.appendChild(newImg);
+        newCardBody.appendChild(newTitle);
+        newCardBody.appendChild(newprice);
+        newCard.appendChild(newCardBody);        
+        return newCard;         
+    }
+
+    const createShop = () => {
+        const shop = document.getElementById('shop');
+        const card = createCardHor('Prueba', '', '2222');
+        shop.appendChild(card);
+        
+    }
+
     return {
          testMethod
         ,runSpinner
         ,goPage
+        ,createShop
     }
 
 })(shop);
 
 view.testMethod();
+view.createShop();
 
 
