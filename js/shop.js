@@ -1,41 +1,53 @@
 const shop = (() => {
+    const key = 'productsInCart'
     //Funcion para agregar los productos al carrito 
-    const addToCart = (id, title, price, quantity) => {
-        
-        const item = cartItem(id, title, price, quantity);
-        const toLocalStorage = JSON.stringify(item);
-
-        localStorage.setItem(item.key, toLocalStorage);
-    }
-    
-    //asigna el item a una variable para poder utilizarla luego y le asigna una key
-    const cartItem = (id, title, price, quantity) => {
-        const item = [
-            item.id = id,
-            item.title = title,
-            item.price = price,
-            item.quantity = quantity,
-            item.key = /*Math.floor(Math.random() * 9999) +*/ id + title
-        ];
-            return item;
+    const addToCart = (prod) => {
+        prod.quantity = 1;
+        if (prod) {
+            const products = getItem(key);
+            products.push(prod);
+            setItem(key, item);
+        }
+        else {
+            setItem(key, [prod]);
+        }
     }
 
     // Modifica los productos en el carrito
-    const modifyFromCart = () => {
-
-        return 'Hello World!';
+    const modifyFromCart = (products, _quantity) => {
+        const inLCproduct = getItem(key);
+        for (let i = 0; i < LCproduct.lenght; i++) {
+            if (inLCproduct[i].id === products.id) {
+                inLCproduct[i].quantity = _quantity;
+            }
+        }
+        setItem(key, LCproduct);
     }
 
     // Borra productos en el carrito
     const removeFromCart = () => {
-
-        return 'Hello World!';
+        const inLCproduct = getItem(key);
+        for (let i = 0; i < LCproduct.lenght; i++) {
+            if (inLCproduct[i].id === products.id) {
+                inLCproduct[i].splice(i, 1);
+            }
+        }
+        setItem(key, LCproduct);
     }
 
     // Verifica el proceso de finalizacion de compra
     const doCheckout = () => {
+        const products = getItem(key)
+        return products;
+    }
 
-        return 'Hello World!';
+    const getItem = (key) => {
+        let item = JSON.parse(localStorage.getItem(key));
+        return item;
+    }
+    const setItem = (itemFromLC) => {
+        let item = JSON.stringify(itemFromLC);
+        localStorage.setItem(key, item);
     }
     return {
         addToCart,
@@ -44,3 +56,4 @@ const shop = (() => {
         doCheckout
     }
 })();
+
