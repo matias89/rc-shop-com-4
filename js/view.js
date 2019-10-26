@@ -1,7 +1,7 @@
 const view = (shop => {
     const testMethod = () => {
         console.log('Testing view!');
-        const hw = shop.testMethod(); // M<ethod from 'shop' module
+        const hw = shop.testMethod(); // Method from 'shop' module
         console.log(hw);
     }
 
@@ -81,15 +81,36 @@ const view = (shop => {
         }
         return elm
     }
+
+    const productDetail = () => {
+        const daddy = createElement ('div', 'daddy', 'row', false, false, false,false,false);
+        const col1 = createElement('div', 'col1', 'col-3', false, false, false, false, false);
+        const col2 = createElement('div', 'col1', 'col', false, false, false, false, false);
+        const title = createElement('p', 'title', 'bold', 'Modelo',false, false, false, false);
+        const description = createElement('p', 'description', false, 'Descripcion del producto', false, false, false, false);
+        const features = document.getElementById('features');
+        col1.appendChild(title);
+        col2.appendChild(description);
+        daddy.appendChild(col1);
+        daddy.appendChild(col2);
+        features.appendChild(daddy);
+
+
+
+    }  
+    
     
     return {
-         testMethod
-        ,runSpinner
-        ,goPage
+         testMethod,
+         runSpinner,
+         goPage,
+         productDetail
     }
 
 })(shop);
 
 view.testMethod();
+view.productDetail();
+
 
 
