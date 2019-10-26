@@ -1,33 +1,33 @@
 const shop = (() => {
     const key = 'productsInCart'
     //Funcion para agregar los productos al carrito 
-    const addToCart = (prod) => {
+    const addToCart = (item) => {
         prod.quantity = 1;
-        if (prod) {
-            const products = getItem(key);
-            products.push(prod);
-            setItem(key, item);
+        if (item) {
+            const prod = getItem(key);
+            prod.push(item);
+            setItem(key, prod);
         }
         else {
             setItem(key, [prod]);
         }
     }
     // Modifica los productos en el carrito
-    const modifyFromCart = (products, _quantity) => {
-        const inLCproduct = getItem(key);
-        for (let i = 0; i < LCproduct.lenght; i++) {
-            if (inLCproduct[i].id === products.id) {
-                inLCproduct[i].quantity = _quantity;
+    const modifyFromCart = (item, _quantity) => {
+        const inLocalStoreProducts = getItem(key);
+        for (let i = 0; i < inLocalStoreProducts.lenght; i++) {
+            if (inLocalStoreProducts[i].id === item.id) {
+                inLocalStoreProducts[i].quantity = _quantity;
             }
         }
         setItem(key, LCproduct);
     }
     // Borra productos en el carrito
-    const removeFromCart = () => {
-        const inLCproduct = getItem(key);
+    const removeFromCart = (item) => {
+        const inLocalStoreProducts = getItem(key);
         for (let i = 0; i < LCproduct.lenght; i++) {
-            if (inLCproduct[i].id === products.id) {
-                inLCproduct[i].splice(i, 1);
+            if (inLocalStoreProducts[i].id === item.id) {
+                inLocalStoreProducts[i].splice(i, 1);
             }
         }
         setItem(key, LCproduct);
@@ -41,8 +41,8 @@ const shop = (() => {
         let item = JSON.parse(localStorage.getItem(key));
         return item;
     }
-    const setItem = (itemFromLC) => {
-        let item = JSON.stringify(itemFromLC);
+    const setItem = (itemFromLocalStorage) => {
+        let item = JSON.stringify(itemFromLocalStorage);
         localStorage.setItem(key, item);
     }
     return {
