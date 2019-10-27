@@ -103,8 +103,10 @@ const view = (shop => {
         return newCardH;       
     }
 
-    const createCard = (title, srcImg, price, description) => {
-        const newCard = createElement('div', false, 'card text-center');
+    const createCard = (title, srcImg, price, description, url) => {
+        const setUrl = '<a href=' + url + '>';
+        const link = createElement(false, false, false, setUrl);
+        const newCard = createElement('div', false, 'card text-center c-shadow');
         const newImg = createElement('img', false, 'card-img-top', false, false, false, srcImg);
         const newCardBody = createElement('div', false, 'card-body');
         const newTitle = createElement('h4', false, 'card-title', title);
@@ -114,8 +116,9 @@ const view = (shop => {
         newCardBody.appendChild(newTitle);
         newCardBody.appendChild(newDescr);
         newCardBody.appendChild(newprice);
-        newCard.appendChild(newCardBody);        
-        return newCard;         
+        newCard.appendChild(newCardBody);  
+        link.appendChild(newCard);      
+        return link;         
     }
 
     const renderShop = () => {
@@ -126,10 +129,10 @@ const view = (shop => {
         const col2 = createElement('div', false, 'col-md-3');
         const col3 = createElement('div', false, 'col-md-3');
         const col4 = createElement('div', false, 'col-md-3');
-        const card1 = createCard('Producto1', './img/tv.jpg', '2000', 'Modelo1');
-        const card2 = createCard('Producto2', './img/tv.jpg', '3000', 'Modelo2');
-        const card3 = createCard('Producto3', './img/tv.jpg', '4000', 'Modelo3');
-        const card4 = createCard('Producto4', './img/tv.jpg', '4000', 'Modelo4');
+        const card1 = createCard('Producto1', './img/tv.jpg', '2000', 'Modelo1', './detail.html');
+        const card2 = createCard('Producto2', './img/tv.jpg', '3000', 'Modelo2', './detail.html');
+        const card3 = createCard('Producto3', './img/tv.jpg', '4000', 'Modelo3', './detail.html');
+        const card4 = createCard('Producto4', './img/tv.jpg', '4000', 'Modelo4', './detail.html');
         col1.appendChild(card1);
         col2.appendChild(card2);
         col3.appendChild(card3);
