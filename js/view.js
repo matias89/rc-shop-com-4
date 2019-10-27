@@ -4,7 +4,7 @@ const view = (shop => {
         const hw = shop.testMethod(); // M<ethod from 'shop' module
         console.log(hw);
     }
-    const createElement = (element, id, className, html, type, placeholder, src, display) => {
+    const createElement = (element, id, className, html, type, placeholder, src, display, href) => {
         const elm = document.createElement(element);
         if (id) {
             elm.id = id;
@@ -27,13 +27,22 @@ const view = (shop => {
         if (display) {
             elm.display = display;
         }
+        if (href) {
+            elm.href = href;
+        }
         return elm
     }
+ const show = () => {
+     const shower =  document.getElementById('shower');
+     const anchor = createElement('a', false, 'text-primary', 'click me', false, false, false, false, 'https://www.google.es');
+     shower.appendChild(anchor);
+ }
     return {
-        testMethod
+        testMethod,
+        show
     }
 })(shop);
 
 view.testMethod();
-
+view.show();
 
