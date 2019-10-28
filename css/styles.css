@@ -1,4 +1,14 @@
+
 .main-footer ul {
     list-style: none;
     padding: 0;
+}
+
+.bg-trasparent-white-kino {
+    background-color: rgba(255,255,255, 0.3);
+}
+
+.image-kino {
+    width: 200px;
+    height: 200px;
 }
