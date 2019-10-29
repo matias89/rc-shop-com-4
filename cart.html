@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+        
+<div class="container">
 
         <section>
-            <div class="container">
-                <div class="alert alert-primary text-center h-75">
+            <div class="container h-75">
+                <div class="alert alert-primary text-center ">
                 
                     <button type="button" class="btn btn-primary w-30">Finalizar Compra</button>
                     <button type="button" class="btn btn-primary w-30"> Seguir Comprando</button>
                 </div>
-                <div class="alert alert-danger text-center h-75">
+                <div class="alert alert-danger text-center">
                     <h1>Alerta!!! no has cargado ningun producto</h1>
                     <button type="button" class="btn btn-secondary w-50 align-middle">Ver Productos</button>
                 </div>
@@ -35,23 +37,77 @@
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" >
             <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Rolling Shop</h5>
-                    <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="modal-msg">                   
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="view.goPage();">Aceptar</button>
-                </div>
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Rolling Shop</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modal-msg">                   
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="view.goPage();">Aceptar</button>
+                    </div>
                 </div>
             </div>
-        </div>       
-
-
+        </div> 
+        <footer class="main-footer container">
+            <h2>Fravega</h2>
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-6">Comprar en Fr...
+                    <ul>
+                        <li><a href="#">Medios de Pago</a></li>
+                        <li><a href="#">Garantia Extendida</a></li>
+                        <li><a href="#">Servicio Tecnico</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">Ayuda...
+                        <ul>
+                            <li><a href="#">Centro de ayuda</a></li>
+                            <li><a href="#">Contactanos</a></li>
+                            <li><a href="#">Preguntas Frecuentes</a></li>
+                            <li><a href="#">Sucursales</a></li>
+                            <li><a href="#">Devoluciones</a></li>
+                        </ul>
+                </div>
+                <div class="col-md-2 col-sm-4">Recomendados..
+                        <ul>
+                            <li><a href="#">Smart TV y Led</a></li>
+                            <li><a href="#">Celulares</a></li>
+                            <li><a href="#">Novedades</a></li>
+                            <li><a href="#">Beneficio Club Personal</a></li>
+                        </ul>
+                </div>
+                <div class="col-md-6">
+                    <form action="">
+                        <label for="">Recibi ofertas y promociones por Email!</label>
+                        <div class="row">
+                            <div class="col-9 mr-0 pr-0">
+                                <input class="form-control" type="text" placeholder="ingresá tu email...">
+                            </div>
+                            <div class="col-3 ml-0 pl-0">
+                                    <button class="btn btn-primary">Suscribirme!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr> 
+            <div>
+                
+                <div>
+                    <span>Fravega</span>
+                   <a href="#"> <img src="img/descarga.jpg " width="10%" height="10%" alt="carrito de compra">
+                   </a>
+                </div>
+                <p>Copyright 2001-2018 | Todos los derechos reservados Fravega.com. Frávega S.A.C.I. e I. Valentín Gómez 2813 (1191) | Capital Federal | Argentina
+        
+                        Las fotos son a modo ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la verificación de stock. Los precios online y los planes de financiación para los productos presentados/publicados en www.fravega.com.ar y/o www.fravega.com son válidos exclusivamente para la compra vía internet en las páginas antes mencionadas. Las especificaciones técnicas y descripciones están sujetas a cambios sin previo aviso.
+                </p>
+            </div>
+        </footer>
+    </div>
     <script type="text/javascript" src="./js/shop.js"></script>
     <script type="text/javascript" src="./js/view.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
