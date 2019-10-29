@@ -1,3 +1,7 @@
+.carousel-item > .view > img {
+    height: 400px;
+    margin: auto;
+}
 
 .main-footer ul {
     list-style: none;
