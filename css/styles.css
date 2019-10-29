@@ -12,3 +12,8 @@
     width: 200px;
     height: 200px;
 }
+/* @media (min-width: 576px){
+    .row .btn-suscripcion {
+        display: none;
+    }
+} */
