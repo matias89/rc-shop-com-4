@@ -1,6 +1,49 @@
 const shop = (() => {
-    const testMethod = () => {
-        return 'Hello World!';
+    const key = 'productsInCart'
+    //Funcion para agregar los productos al carrito 
+    const addToCart = (item) => {
+        item.quantity = 1;
+        const prod = getItem(key);
+        if (prod) {
+            prod.push(item);
+            setItem(key, prod);
+        }
+        else {
+            setItem(key, [prod]);
+        }
+    }
+    // Modifica los productos en el carrito
+    const modifyFromCart = (item, _quantity) => {
+        const inLocalStoreProducts = getItem(key);
+        for (let i = 0; i < inLocalStoreProducts.lenght; i++) {
+            if (inLocalStoreProducts[i].id === item.id) {
+                inLocalStoreProducts[i].quantity = _quantity;
+            }
+        }
+        setItem(key, LCproduct);
+    }
+    // Borra productos en el carrito
+    const removeFromCart = (item) => {
+        const inLocalStoreProducts = getItem(key);
+        for (let i = 0; i < LCproduct.lenght; i++) {
+            if (inLocalStoreProducts[i].id === item.id) {
+                inLocalStoreProducts[i].splice(i, 1);
+            }
+        }
+        setItem(key, LCproduct);
+    }
+    // Verifica el proceso de finalizacion de compra
+    const doCheckout = () => {
+        const products = getItem(key)
+        return products;
+    }
+    const getItem = (key) => {
+        let item = JSON.parse(localStorage.getItem(key));
+        return item;
+    }
+    const setItem = (itemFromLocalStorage) => {
+        let item = JSON.stringify(itemFromLocalStorage);
+        localStorage.setItem(key, item);
     }
     const prod = () => {
         let milk = [{
@@ -36,27 +79,9 @@ const shop = (() => {
         localStorage.setItem( 'product', a = newValue )
     }
     return {
-        prod,
-        addProduct,
-        editProduct,
-        testMethod,
-        removeProduct,
+        addToCart,
+        modifyFromCart,
+        removeFromCart,
+        doCheckout
     }
 })();
-
-shop.addProduct('Products', shop.prod());
-const prod = localStorage.getItem('Products');
-const productos = JSON.parse(prod);
-productos.push({
-    title: 'Mate',
-    Price: '10 pesos',
-    id: '1'
-})
-console.log(productos[3])
-
-// shop.addProduct('Sony TV', shop.prod());
-// shop.addProduct(shop.products[1], '2');
-// setTimeout(() => {
-//     shop.removeProduct('Leche');
-//     // shop.editProduct(shop.products[0]+'title', 'pan');    
-//  }, 3000);
