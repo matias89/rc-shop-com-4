@@ -4,8 +4,7 @@ const shop = (() => {
     const addToCart = (item) => {
         item.quantity = 1;
         const prod = getItem(key);
-        if (item || prod) {
-            
+        if (prod) {
             prod.push(item);
             setItem(key, prod);
         }
