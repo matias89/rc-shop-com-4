@@ -3,8 +3,9 @@ const shop = (() => {
     //Funcion para agregar los productos al carrito 
     const addToCart = (item) => {
         item.quantity = 1;
-        if (item) {
-            const prod = getItem(key);
+        const prod = getItem(key);
+        if (item || prod) {
+            
             prod.push(item);
             setItem(key, prod);
         }
