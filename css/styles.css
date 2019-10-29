@@ -1,3 +1,12 @@
 .c-shadow:hover{
     box-shadow:  0px 11px 20px -7px black,0px -11px 20px -7px black;
 }
+
+.bg-trasparent-white-kino {
+    background-color: rgba(255,255,255, 0.3);
+}
+
+.image-kino {
+    width: 200px;
+    height: 200px;
+}

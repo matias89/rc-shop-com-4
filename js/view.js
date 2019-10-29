@@ -39,7 +39,7 @@ const view = (shop => {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
     }
 
-    const getMSG = typeMsg =>{
+    const getMSG = typeMsg => { 
         let msg;
         if (typeMsg) {
             msg = 'La compra se realizó con Exito.';
@@ -49,10 +49,10 @@ const view = (shop => {
         return msg;
     }
 
-    const goPage = () =>{
+    const goPage = () => {
         const statusPurchase = localStorage.getItem('finishPurchase');
         if (statusPurchase === '1') {
-            window.location="./index.html";
+            location='./index.html';
         }
     } 
 
