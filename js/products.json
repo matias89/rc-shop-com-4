@@ -1,0 +1,506 @@
+[{
+     "title":"SMART TV",
+     "id": 0,
+     "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+     "description": "Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.",
+     "features": {
+       "inches": 75,
+       "screenType": "Led",
+       "resolution": "4k uhd",
+       "weigth": 3.8,
+       "Bluetooth": "NO",
+       "WiFi": "INTEGRADO",
+       "guarantee": "12 MESES"        
+     },
+     "price": 169.999,
+     "images": [{
+       "title": "Sony 4k ",
+       "path": "4kuhd.jpg"
+     },
+     {
+         "title": "Sony 4k ",
+         "path":"tvsmart.jpg"
+     }]
+   },
+   {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  },
+  {
+    "title":"SMART TV",
+    "id": 0,
+    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
+    "features": [{
+      "inches": 75,
+      "screenType": "Led",
+      "resolution": "4k uhd",
+      "weigth": 3.8,
+      "Bluetooth": "NO",
+      "WiFi": "INTEGRADO",
+      "guarantee": "12 MESES"        
+    }],
+    "price": 169.999,
+    "images": [{
+      "title": "Sony 4k ",
+      "path": "4kuhd.jpg"
+    },
+    {
+        "title": "Sony 4k ",
+        "path":"tvsmart.jpg"
+    }
+       ]
+  }
+
+]

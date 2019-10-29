@@ -1,3 +1,7 @@
+.carousel-item > .view > img {
+    height: 400px;
+    margin: auto;
+}
 
 .main-footer ul {
     list-style: none;
@@ -11,6 +15,22 @@
 .image-kino {
     width: 200px;
     height: 200px;
+}
+
+.shadowCard{
+    color: black;
+}
+
+.shadowCard:hover{
+    box-shadow:  0px 5px 10px -7px black,0px -5px 10px -7px black;
+}
+
+.linkCard{
+    text-decoration: none;
+}
+
+.linkCard:hover{
+    text-decoration: none;
 }
 /* @media (min-width: 576px){
     .row .btn-suscripcion {
