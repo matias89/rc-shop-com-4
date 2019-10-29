@@ -1,0 +1,8 @@
+.navegacion ul {
+    list-style: none;
+
+}
+.menu li a:hover {
+    color: orangered;
+
+}
