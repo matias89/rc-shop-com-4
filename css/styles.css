@@ -1,3 +1,9 @@
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
 .bg-trasparent-white-kino {
     background-color: rgba(255,255,255, 0.3);
 }
@@ -22,3 +28,8 @@
 .linkCard:hover{
     text-decoration: none;
 }
+/* @media (min-width: 576px){
+    .row .btn-suscripcion {
+        display: none;
+    }
+} */
