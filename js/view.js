@@ -83,20 +83,51 @@ const view = (shop => {
     }
 
     const productDetail = () => {
-        const daddy = createElement ('div', 'daddy', 'row', false, false, false,false,false);
-        const col1 = createElement('div', 'col1', 'col-3', false, false, false, false, false);
-        const col2 = createElement('div', 'col1', 'col', false, false, false, false, false);
-        const title = createElement('p', 'title', 'bold', 'Modelo',false, false, false, false);
-        const description = createElement('p', 'description', false, 'Descripcion del producto', false, false, false, false);
+        const daddy = createElement ('div', 'daddy', 'container', false, false, false,false,false);
+        const title = createElement('h4', 'title', 'bold', 'Descripción general',false, false, false, false);
+        const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
+        const daddy1 = createElement('div', 'daddy1', 'container', false, false, false,false,false);
+        const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
+        const ul = createElement('ul');
+        const item = {
+            "inches": 75,
+            "screenType": "Led",
+            "resolution": "4k uhd",
+            "weigth": 3.8,
+            "Bluetooth": "NO",
+            "WiFi": "INTEGRADO",
+            "guarantee": "12 MESES"        
+        };
+        const li1Content = `<h6 class="d-inline"> Inches: </h6> ${item.inches}`;
+        const li2Content = `<h6 class="d-inline"> Screen Type: </h6> ${item.screenType}`;
+        const li3Content = `<h6 class="d-inline"> Resolution: </h6> ${item.resolution}`;
+        const li4Content = `<h6 class="d-inline"> Weight: </h6> ${item.weigth}`;
+        const li5Content = `<h6 class="d-inline"> Bluetooth: </h6> ${item.Bluetooth}`;
+        const li6Content = `<h6 class="d-inline"> WiFi: </h6> ${item.WiFi}`;
+        const li7Content = `<h6 class="d-inline"> Guarantee: </h6> ${item.guarantee}`;
+        const li1 = createElement('li', false, false, li1Content);
+        const li2 = createElement('li',false, false, li2Content);
+        const li3 = createElement('li',false, false, li3Content);
+        const li4 = createElement('li',false, false, li4Content);
+        const li5 = createElement('li',false, false, li5Content);
+        const li6 = createElement('li',false, false, li6Content);
+        const li7 = createElement('li',false, false, li7Content);
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        ul.appendChild(li4);
+        ul.appendChild(li5);
+        ul.appendChild(li6);
+        ul.appendChild(li7);
         const features = document.getElementById('features');
-        col1.appendChild(title);
-        col2.appendChild(description);
-        daddy.appendChild(col1);
-        daddy.appendChild(col2);
+        daddy.appendChild(title);
+        daddy.appendChild(description);
+        daddy1.appendChild(title1);
+        daddy1.appendChild(ul);
         features.appendChild(daddy);
-
-
-
+        features.appendChild(daddy1);
+        
+        
     }  
     
     
