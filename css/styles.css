@@ -6,3 +6,7 @@
     width: 200px;
     height: 200px;
 }
+
+.background-size-kino {
+    background-size: 60%!important;
+}
