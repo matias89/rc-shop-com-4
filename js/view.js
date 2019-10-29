@@ -1,9 +1,4 @@
 const view = (shop => {
-    const testMethod = () => {
-        console.log('Testing view!');
-        const hw = shop.testMethod(); // M<ethod from 'shop' module
-        console.log(hw);
-    }
 
     const runSpinner = (activeSpinner) => {        
         const btnfinish = document.getElementById('btn-finish');
@@ -56,7 +51,7 @@ const view = (shop => {
         }
     } 
 
-    const createElement = (element, id, className, html, type, placeholder, src, display) => {
+    const createElement = (element, id, className, html, type, placeholder, src, display, href) => {
         const elm = document.createElement(element);
         if (id) {
             elm.id = id;
@@ -79,11 +74,15 @@ const view = (shop => {
         if (display) {
             elm.display = display;
         }
+        if (href) {
+            elm.href = href;
+        }
         return elm
     }
 
-    const createCardHor = (title, srcImg, price, description) => {
-        const newCardH = createElement('div', false, 'card mb-3');
+    const createCardHor = (title, srcImg, price, description, url) => {
+        const link = createElement('a', false, 'linkCard', false, false, false, false, false, url);
+        const newCardH = createElement('div', false, 'card mb-3 shadowCard');
         const newRow = createElement('div', false, 'row no-gutters');
         const newCol1 = createElement('div', false, 'col-md-4');
         const newCol2 = createElement('div', false, 'col-md-8');
@@ -100,13 +99,13 @@ const view = (shop => {
         newRow.appendChild(newCol1);
         newRow.appendChild(newCol2);
         newCardH.appendChild(newRow);        
-        return newCardH;       
+        link.appendChild(newCardH);      
+        return link;              
     }
 
     const createCard = (title, srcImg, price, description, url) => {
-        const setUrl = '<a href=' + url + '>';
-        const link = createElement(false, false, false, setUrl);
-        const newCard = createElement('div', false, 'card text-center c-shadow');
+        const link = createElement('a', false, 'linkCard', false, false, false, false, false, url);
+        const newCard = createElement('div', false, 'card text-center shadowCard');
         const newImg = createElement('img', false, 'card-img-top', false, false, false, srcImg);
         const newCardBody = createElement('div', false, 'card-body');
         const newTitle = createElement('h4', false, 'card-title', title);
@@ -122,17 +121,17 @@ const view = (shop => {
     }
 
     const renderShop = () => {
-        const shop = document.getElementById('shop');
-        shop.className = 'container';
+        const shopElement = document.getElementById('shop');
+        shopElement.className = 'container';
         const row = createElement('div', false, 'row my-2');
-        const col1 = createElement('div', false, 'col-md-3');
-        const col2 = createElement('div', false, 'col-md-3');
-        const col3 = createElement('div', false, 'col-md-3');
-        const col4 = createElement('div', false, 'col-md-3');
-        const card1 = createCard('Producto1', './img/tv.jpg', '2000', 'Modelo1', './detail.html');
-        const card2 = createCard('Producto2', './img/tv.jpg', '3000', 'Modelo2', './detail.html');
-        const card3 = createCard('Producto3', './img/tv.jpg', '4000', 'Modelo3', './detail.html');
-        const card4 = createCard('Producto4', './img/tv.jpg', '4000', 'Modelo4', './detail.html');
+        const col1 = createElement('div', false, 'col-sm-6 col-md-3');
+        const col2 = createElement('div', false, 'col-sm-6 col-md-3');
+        const col3 = createElement('div', false, 'col-sm-6 col-md-3');
+        const col4 = createElement('div', false, 'col-sm-6 col-md-3');
+        const card1 = createCard('Producto1', './images/products/tv.jpg', '2000', 'Modelo1', './detail.html');
+        const card2 = createCard('Producto2', './images/products/tv.jpg', '3000', 'Modelo2', './detail.html');
+        const card3 = createCard('Producto3', './images/products/tv.jpg', '4000', 'Modelo3', './detail.html');
+        const card4 = createCard('Producto4', './images/products/tv.jpg', '4000', 'Modelo4', './detail.html');
         col1.appendChild(card1);
         col2.appendChild(card2);
         col3.appendChild(card3);
@@ -141,33 +140,31 @@ const view = (shop => {
         row.appendChild(col2);
         row.appendChild(col3);
         row.appendChild(col4);
-        shop.appendChild(row);     
+        shopElement.appendChild(row);     
         const row2 = createElement('div', false, 'row my-2');   
         const colH1 = createElement('div', false, 'col-md-4');
         const colH2 = createElement('div', false, 'col-md-4');
         const colH3 = createElement('div', false, 'col-md-4');
-        const cardH1 = createCardHor('Producto1', './img/tv.jpg', '2000', 'Modelo1');
-        const cardH2 = createCardHor('Producto2', './img/tv.jpg', '3000', 'Modelo2');
-        const cardH3 = createCardHor('Producto2', './img/tv.jpg', '3000', 'Modelo2');
+        const cardH1 = createCardHor('Producto1', './images/products/tv.jpg', '2000', 'Modelo1', './detail.html');
+        const cardH2 = createCardHor('Producto2', './images/products/tv.jpg', '3000', 'Modelo2', './detail.html');
+        const cardH3 = createCardHor('Producto2', './images/products/tv.jpg', '3000', 'Modelo2', './detail.html');
         colH1.appendChild(cardH1);
         colH2.appendChild(cardH2);
         colH3.appendChild(cardH3);
         row2.appendChild(colH1);
         row2.appendChild(colH2);
         row2.appendChild(colH3);
-        shop.appendChild(row2); 
+        shopElement.appendChild(row2); 
     }
 
     return {
-         testMethod
-        ,runSpinner
-        ,goPage
-        ,renderShop
+        runSpinner,
+        goPage,
+        renderShop
     }
 
 })(shop);
 
-view.testMethod();
 view.renderShop();
 
 
