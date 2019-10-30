@@ -1,5 +1,5 @@
-.carousel-item > .view > img {
-    height: 400px;
+.carousel.inner > .item > img {
+    width: 400px;
     margin: auto;
 }
 
