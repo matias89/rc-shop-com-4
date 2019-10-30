@@ -2,9 +2,9 @@ const shop = (() => {
     const key = 'productsInCart'
     //Funcion para agregar los productos al carrito 
     const addToCart = (item) => {
-        prod.quantity = 1;
-        if (item) {
-            const prod = getItem(key);
+        item.quantity = 1;
+        const prod = getItem(key);
+        if (prod) {
             prod.push(item);
             setItem(key, prod);
         }
