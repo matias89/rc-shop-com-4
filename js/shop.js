@@ -45,39 +45,6 @@ const shop = (() => {
         let item = JSON.stringify(itemFromLocalStorage);
         localStorage.setItem(key, item);
     }
-    const prod = () => {
-        let milk = [{
-            title: 'Leche',
-            Price: '10 pesos',
-            id: '1'
-        },
-        {
-            title: 'Aceite',
-            Price: '10 pesos',
-            id: '1'
-        },
-        {
-            title: 'Azucar',
-            Price: '10 pesos',
-            id: '1'
-        }]
-        return milk
-    }
-    const addProduct = (key, product) => {
-        const formatToSave = JSON.stringify(product);
-        // console.log('test', formatToSave);
-        localStorage.setItem(key, formatToSave);
-        // console.log('test2', JSON.parse(formatToSave));
-    }
-    const removeProduct = (product) => {
-        localStorage.clear(product);
-    }
-    const editProduct = (key, newValue) => {
-        const info = localStorage.getItem('product');
-        const data = JSON.parse(info);
-        let a = data.key; 
-        localStorage.setItem( 'product', a = newValue )
-    }
     return {
         addToCart,
         modifyFromCart,
