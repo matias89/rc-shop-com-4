@@ -81,12 +81,11 @@ const view = (shop => {
     }
 
     const productDetail = () => {
+        const titledetail = createElement('h1', 'td', 'bold', 'TV SMART 4K UHD')
         const daddy = createElement ('div', 'daddy', 'container border border-primary my-2 p-3', false, false, false,false,false);
         const title = createElement('h4', 'title', 'bold', 'General description',false, false, false, false);
-        const child1 = createElement('div', 'child1', 'row')
-        const child2 = createElement('div', 'child2', 'col-6');
-        const child3 = createElement('div', 'child3', 'col-6','Price: $16.999');
         const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
+        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit');
         const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
         const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
         const ul = createElement('ul',false);
@@ -120,17 +119,16 @@ const view = (shop => {
         ul.appendChild(li5);
         ul.appendChild(li6);
         ul.appendChild(li7);
+        const detailtitle = document.getElementById('detailtitle');
         const features = document.getElementById('features');
         daddy.appendChild(title);
         daddy.appendChild(description);
-        // daddy.appendChild(child1);
-        child2.appendChild(daddy);
-        child1.appendChild(child2);
-        child1.appendChild(child3);
         daddy1.appendChild(title1);
         daddy1.appendChild(ul);
         features.appendChild(daddy);
+        detailtitle.appendChild(titledetail);
         features.appendChild(daddy1);
+        features.appendChild(button);
         
         
     }  
