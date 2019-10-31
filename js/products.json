@@ -49,14 +49,14 @@
      {
       "title":"SMART TV",
       "id": 2,
-      "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-      "description": "Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.",
+      "model": "Televisores Noblex Smart Tv 32 Hd 32x5000",
+      "description": "TV LED 32\" HD (1366x768). Formato 16. Brillo 210cd/m². Contraste 2000:1. Tasa de refresco 60Hz. Tiempo de respuesta 6.5ms. HDMIx2. USBx2. Bluetooth Pot.de audio 6W RMSx2. Salida para auriculares.",
       "features": {
-        "inches": 75,
+        "inches": 32,
         "screenType": "Led",
-        "resolution": "4k uhd",
-        "weigth": 3.8,
-        "Bluetooth": "NO",
+        "resolution": "1366X768 PX",
+        "weigth": 48,
+        "Bluetooth": "SI",
         "WiFi": "INTEGRADO",
         "guarantee": "12 MESES"        
       },
