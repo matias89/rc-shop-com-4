@@ -51,8 +51,9 @@ const view = (shop => {
         }
     } 
 
-    const createElement = (element, id, className, html, type, placeholder, src, display, href) => {
+    const createElement = (element, id, className, html, type, placeholder, src, display, href, events) => {
         const elm = document.createElement(element);
+
         if (id) {
             elm.id = id;
         }
@@ -77,11 +78,23 @@ const view = (shop => {
         if (href) {
             elm.href = href;
         }
+        if (events && events.length) {
+            for (let i = 0; i < events.length; i++) {
+                const ev = events[i];
+                elm[ev.type] = ev.fn; // el.onclick = () => { console.log('') }
+            }
+        }
         return elm
     }
 
     const productDetail = () => {
-        const daddy = createElement ('div', 'daddy', 'container', false, false, false,false,false);
+        const exampleEvent = [{
+            type: 'onclick',
+            fn: () => {
+                console.log('click')
+            }
+        }];
+        const daddy = createElement ('div', 'daddy', 'container', false, false, false,false,false, false);
         const title = createElement('h4', 'title', 'bold', 'Descripción general',false, false, false, false);
         const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
         const daddy1 = createElement('div', 'daddy1', 'container', false, false, false,false,false);
@@ -214,8 +227,8 @@ const view = (shop => {
 
 })(shop);
 
-//view.productDetail();
-view.renderShop();
+view.productDetail();
+// view.renderShop();
 
 
 
