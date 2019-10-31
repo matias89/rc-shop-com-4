@@ -1,5 +1,6 @@
 const shop = (() => {
     const key = 'productsInCart'
+    const url = 'http://localhost:3000/products';
     //Funcion para agregar los productos al carrito 
     const addToCart = (item) => {
         item.quantity = 1;
@@ -11,6 +12,16 @@ const shop = (() => {
         else {
             setItem(key, [prod]);
         }
+    }
+
+    const testFetch = () => {
+        const requestProducts = fetch(url);
+        requestProducts.then(response => {
+            const r =response.json();
+            r.then(products => {
+                console.log(products);
+            });
+        });
     }
     // Modifica los productos en el carrito
     const modifyFromCart = (item, _quantity) => {
@@ -49,6 +60,9 @@ const shop = (() => {
         addToCart,
         modifyFromCart,
         removeFromCart,
-        doCheckout
+        doCheckout,
+        testFetch
     }
 })();
+
+shop.testFetch();
