@@ -41,7 +41,7 @@ const shop = (() => {
         let item = JSON.parse(localStorage.getItem(key));
         return item;
     }
-    const setItem = (itemFromLocalStorage) => {
+    const setItem = (key, itemFromLocalStorage) => {
         let item = JSON.stringify(itemFromLocalStorage);
         localStorage.setItem(key, item);
     }
