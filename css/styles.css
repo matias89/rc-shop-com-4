@@ -1,6 +1,5 @@
-.carousel-item > .view > img {
-    height: 400px;
-    margin: auto;
+.carousel.inner > .item > img {
+    
 }
 
 .main-footer ul {
