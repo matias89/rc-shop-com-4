@@ -88,12 +88,11 @@ const view = (shop => {
     }
 
     const productDetail = () => {
-        const exampleEvent = [{
+        const addEvent = [{
             type: 'onclick',
-            fn: () => {
-                console.log('click')
+            fn: addToCart
             }
-        }];
+        ];
         const daddy = createElement ('div', 'daddy', 'container', false, false, false,false,false, false);
         const title = createElement('h4', 'title', 'bold', 'Descripción general',false, false, false, false);
         const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
@@ -217,7 +216,17 @@ const view = (shop => {
         row2.appendChild(colH3);
         shopElement.appendChild(row2); 
     }
-    
+    const cartButton = () => {
+        const addEvent = [{
+            type: 'onclick',
+            fn: addToCart
+            }
+        ];
+        const cart_button = document.getElementById('cart_button');
+        const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false, addEvent);
+        const alertPrimary = createElement('div', 'alertPrimary', 'alert alert-primary text-center', false, )
+    }
+
     return {
          runSpinner,
          goPage,
