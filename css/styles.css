@@ -1,6 +1,3 @@
-.carousel.inner > .item > img {
-    
-}
 
 .main-footer ul {
     list-style: none;
@@ -16,11 +13,7 @@
     height: 200px;
 }
 
-.background-size-kino {
-    background-size: 60%!important;
-
-}
-    .shadowCard{
+.shadowCard{
     color: black;
 }
 
@@ -40,3 +33,10 @@
         display: none;
     }
 } */
+.bgHeader{
+    background: #FFCC98;
+}
+
+.bgFooter{
+    background: #FFE3B3;
+}
