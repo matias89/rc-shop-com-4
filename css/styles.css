@@ -32,14 +32,9 @@
 .price{
     color: #E32C1F !important;
 }
-/* @media (min-width: 576px){
-    .row .btn-suscripcion {
-        display: none;
-    }
-} */
+
 .bgHeader{
     background: #FFCC98;
-    /*color: #FF6646 !important;*/
     color: #E32C1F !important;
 }
 
