@@ -3,7 +3,7 @@ const shop = (() => {
     const url = 'http://localhost:3000/products';
     //Funcion para agregar los productos al carrito 
     const addToCart = (item) => {
-        // item.quantity = 1; 
+        item.quantity = 1; 
         const prod = getItem(key);
         if (prod) {
             prod.push(item);
@@ -20,7 +20,6 @@ const shop = (() => {
             const r =response.json();
             r.then(products => {
                 console.log(products);
-                 return products
             });
         });
     }
@@ -67,4 +66,3 @@ const shop = (() => {
     }
 })();
 
-shop.testFetch();

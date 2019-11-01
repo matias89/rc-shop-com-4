@@ -81,28 +81,13 @@ const view = (shop => {
         if (events && events.length) {
             for (let i = 0; i < events.length; i++) {
                 const ev = events[i];
-                elm[ev.type] = ev.fn; // el.onclick = () => { console.log('') }
+                elm[ev.type] = ev.fn; // elm.onclick = () => { console.log('') }
             }
         }
         return elm
     }
 
     const productDetail = () => {
-        const addEvent = [{
-            type: 'onclick',
-            fn: shop.addToCart
-            }
-        ];
-        const daddy = createElement ('div', 'daddy', 'container', false, false, false,false,false, false);
-        const title = createElement('h4', 'title', 'bold', 'Descripción general',false, false, false, false);
-        const titledetail = createElement('h1', 'td', 'bold', 'TV SMART 4K UHD')
-        const daddy2 = createElement ('div', 'daddy2', 'container border border-primary my-2 p-3', false, false, false,false,false);
-        const title2 = createElement('h4', 'title2', 'bold', 'General description',false, false, false, false);
-        const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
-        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit', false, false, false, false, addEvent);
-        const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
-        const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
-        const ul = createElement('ul',false);
         const item = {
             "inches": 75,
             "screenType": "Led",
@@ -112,6 +97,19 @@ const view = (shop => {
             "WiFi": "INTEGRADO",
             "guarantee": "12 MESES"        
         };
+        const addEvent = [{
+            type: 'onclick',
+            fn: shop.addToCart
+            }
+        ];
+        const titledetail = createElement('h1', 'td', 'bold', 'TV SMART 4K UHD')
+        const daddy = createElement ('div', 'daddy', 'container border border-primary my-2 p-3', false, false, false,false,false);
+        const title = createElement('h4', 'title', 'bold', 'General description',false, false, false, false);
+        const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
+        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit', false, false, false, false, addEvent);
+        const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
+        const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
+        const ul = createElement('ul',false);
         const li1Content = `<h6 class="d-inline"> Inches: </h6> ${item.inches}`;
         const li2Content = `<h6 class="d-inline"> Screen Type: </h6> ${item.screenType}`;
         const li3Content = `<h6 class="d-inline"> Resolution: </h6> ${item.resolution}`;
@@ -142,9 +140,7 @@ const view = (shop => {
         features.appendChild(daddy);
         detailtitle.appendChild(titledetail);
         features.appendChild(daddy1);
-        features.appendChild(button);
-        
-        
+        features.appendChild(button);  
     }  
     
     const createCardHor = (title, srcImg, price, description, url) => {
@@ -262,7 +258,7 @@ const view = (shop => {
         
     }
     const diff = () => {
-        let productsInCart = shop.getItem('productsInCart');
+        let productsInCart = shop.getItem();
         console.log(productsInCart);
         if (productsInCart) {
             prodView();
@@ -271,7 +267,7 @@ const view = (shop => {
         }
     }
     return {
-         diff,
+         prodView,
          runSpinner,
          goPage,
          productDetail,
@@ -281,7 +277,7 @@ const view = (shop => {
 })(shop);
 
 view.productDetail();
-view.renderShop();
+// view.renderShop();
 // view.noProdView();
 // view.prodView();
-view.diff();
+// view.diff();
