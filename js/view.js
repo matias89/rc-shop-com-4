@@ -1,7 +1,7 @@
 const view = (shop => {
 
     const runSpinner = (activeSpinner) => {        
-        const btnfinish = document.getElementById('btn-finish');
+        const btnfinish = document.getElementById('endShopButton');
         btnfinish.disabled = true;        
         const spinnerblock = document.getElementById('spinner');
         if (activeSpinner) {
@@ -95,10 +95,14 @@ const view = (shop => {
         ];
         const daddy = createElement ('div', 'daddy', 'container', false, false, false,false,false, false);
         const title = createElement('h4', 'title', 'bold', 'Descripción general',false, false, false, false);
+        const titledetail = createElement('h1', 'td', 'bold', 'TV SMART 4K UHD')
+        const daddy2 = createElement ('div', 'daddy2', 'container border border-primary my-2 p-3', false, false, false,false,false);
+        const title2 = createElement('h4', 'title2', 'bold', 'General description',false, false, false, false);
         const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
-        const daddy1 = createElement('div', 'daddy1', 'container', false, false, false,false,false);
+        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit');
+        const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
         const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
-        const ul = createElement('ul');
+        const ul = createElement('ul',false);
         const item = {
             "inches": 75,
             "screenType": "Led",
@@ -129,13 +133,16 @@ const view = (shop => {
         ul.appendChild(li5);
         ul.appendChild(li6);
         ul.appendChild(li7);
+        const detailtitle = document.getElementById('detailtitle');
         const features = document.getElementById('features');
         daddy.appendChild(title);
         daddy.appendChild(description);
         daddy1.appendChild(title1);
         daddy1.appendChild(ul);
         features.appendChild(daddy);
+        detailtitle.appendChild(titledetail);
         features.appendChild(daddy1);
+        features.appendChild(button);
         
         
     }  
@@ -216,18 +223,31 @@ const view = (shop => {
         row2.appendChild(colH3);
         shopElement.appendChild(row2); 
     }
-    const cartButton = () => {
+    const FinishButton = () => {
         const addEvent = [{
             type: 'onclick',
-            fn: addToCart
+            fn: runSpinner
             }
         ];
         const cart_button = document.getElementById('cart_button');
-        const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false, addEvent);
-        const alertPrimary = createElement('div', 'alertPrimary', 'alert alert-primary text-center', false, )
+        const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false);
+        const alertPrimary = createElement('div', 'alertPrimary', 'alert alert-primary text-center', false, );
+        const endShopBtn = createElement('button','endShopButton', 'btn btn-primary w-30', '<span>Finalizar compra</span>', false, false, false, false, false, addEvent);
+        const contShopBtn = createElement('button', 'contShopBtn', 'btn btn-primary w-30', '<span>Seguir comprando</span>', false, false, false, false, false);
+        const alertDanger = createElement('div', 'alertDanger', 'alert alert-danger text-center');
+        const alertTitle = createElement('h1', 'alertTitle', false, 'Alerta!!! No has cargado ningún producto');
+        const seeProdBtn = createElement('button', 'seeProdBtn', 'btn btn-primary w-50 align-middle', 'Ver productos', false, false, false, false, false, false);
+        alertPrimary.appendChild(endShopBtn);
+        alertPrimary.appendChild(contShopBtn);
+        alertDanger.appendChild(alertTitle);
+        alertDanger.appendChild(seeProdBtn);
+        containerDiv.appendChild(alertPrimary);
+        containerDiv.appendChild(alertDanger);
+        cart_button.appendChild(containerDiv);
     }
 
     return {
+        FinishButton,
          runSpinner,
          goPage,
          productDetail,
@@ -236,8 +256,6 @@ const view = (shop => {
 
 })(shop);
 
-view.productDetail();
-// view.renderShop();
-
-
-
+//view.productDetail();
+//view.renderShop();
+view.FinishButton();
