@@ -28,6 +28,10 @@
 .linkCard:hover{
     text-decoration: none;
 }
+
+.price{
+    color: #E32C1F !important;
+}
 /* @media (min-width: 576px){
     .row .btn-suscripcion {
         display: none;
@@ -35,8 +39,24 @@
 } */
 .bgHeader{
     background: #FFCC98;
+    /*color: #FF6646 !important;*/
+    color: #E32C1F !important;
+}
+
+.bgHeader  div{
+    background: #FFCC98;
+    color: #E32C1F !important;
+    border-color: blanchedalmond;
+}
+
+.bgHeader a{
+    color: #E32C1F !important;
 }
 
 .bgFooter{
     background: #FFE3B3;
+}
+
+.bgFooter span{
+    color: #E32C1F !important;
 }
