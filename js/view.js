@@ -90,7 +90,7 @@ const view = (shop => {
     const productDetail = () => {
         const addEvent = [{
             type: 'onclick',
-            fn: shop.addToCart()
+            fn: shop.addToCart
             }
         ];
         const daddy = createElement ('div', 'daddy', 'container', false, false, false,false,false, false);
@@ -99,7 +99,7 @@ const view = (shop => {
         const daddy2 = createElement ('div', 'daddy2', 'container border border-primary my-2 p-3', false, false, false,false,false);
         const title2 = createElement('h4', 'title2', 'bold', 'General description',false, false, false, false);
         const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
-        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit', false, false, false, false, shop.addToCart());
+        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit', false, false, false, false, addEvent);
         const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
         const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
         const ul = createElement('ul',false);
@@ -261,10 +261,17 @@ const view = (shop => {
         cart_button.appendChild(containerDiv);
         
     }
-
+    const diff = () => {
+        let productsInCart = shop.getItem('productsInCart');
+        console.log(productsInCart);
+        if (productsInCart) {
+            prodView();
+        } else {
+            noProdView();
+        }
+    }
     return {
-         prodView,
-         noProdView,
+         diff,
          runSpinner,
          goPage,
          productDetail,
@@ -276,4 +283,5 @@ const view = (shop => {
 view.productDetail();
 view.renderShop();
 // view.noProdView();
-view.prodView();
+// view.prodView();
+view.diff();

@@ -60,6 +60,7 @@ const shop = (() => {
     return {
         addToCart,
         modifyFromCart,
+        getItem,
         removeFromCart,
         doCheckout,
         testFetch
