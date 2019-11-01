@@ -90,7 +90,7 @@ const view = (shop => {
     const productDetail = () => {
         const addEvent = [{
             type: 'onclick',
-            fn: addToCart
+            fn: shop.addToCart()
             }
         ];
         const daddy = createElement ('div', 'daddy', 'container', false, false, false,false,false, false);
@@ -99,7 +99,7 @@ const view = (shop => {
         const daddy2 = createElement ('div', 'daddy2', 'container border border-primary my-2 p-3', false, false, false,false,false);
         const title2 = createElement('h4', 'title2', 'bold', 'General description',false, false, false, false);
         const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
-        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit');
+        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit', false, false, false, false, shop.addToCart());
         const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
         const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
         const ul = createElement('ul',false);
@@ -223,31 +223,48 @@ const view = (shop => {
         row2.appendChild(colH3);
         shopElement.appendChild(row2); 
     }
-    const FinishButton = () => {
+    // Vista en cart.html cuando hay productos cargados en el carrito
+    const prodView = () => {
         const addEvent = [{
             type: 'onclick',
             fn: runSpinner
             }
         ];
+        const addEvent1 = [{
+            type: 'onclick',
+            fn: () => {
+                location.href= './index.html'
+            }
+            }
+        ];
         const cart_button = document.getElementById('cart_button');
         const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false);
         const alertPrimary = createElement('div', 'alertPrimary', 'alert alert-primary text-center', false, );
-        const endShopBtn = createElement('button','endShopButton', 'btn btn-primary w-30', '<span>Finalizar compra</span>', false, false, false, false, false, addEvent);
-        const contShopBtn = createElement('button', 'contShopBtn', 'btn btn-primary w-30', '<span>Seguir comprando</span>', false, false, false, false, false);
+        const endShopBtn = createElement('button','endShopButton', 'btn btn-primary mx-4 my-2', '<span>Finalizar compra</span>', false, false, false, false, false, addEvent);
+        const contShopBtn = createElement('button', 'contShopBtn', 'btn btn-primary mx-4 my-2', '<span>Seguir comprando</span>', 'button', false, false, false, false, addEvent1);
+        alertPrimary.appendChild(endShopBtn);
+        alertPrimary.appendChild(contShopBtn);
+        
+        containerDiv.appendChild(alertPrimary);
+        cart_button.appendChild(containerDiv);
+    }
+    // Vista en cart.html cuando no hay  productos guardados en el carrito
+    const noProdView = () => {
+        const cart_button = document.getElementById('cart_button');
+        const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false);
         const alertDanger = createElement('div', 'alertDanger', 'alert alert-danger text-center');
         const alertTitle = createElement('h1', 'alertTitle', false, 'Alerta!!! No has cargado ningún producto');
         const seeProdBtn = createElement('button', 'seeProdBtn', 'btn btn-primary w-50 align-middle', 'Ver productos', false, false, false, false, false, false);
-        alertPrimary.appendChild(endShopBtn);
-        alertPrimary.appendChild(contShopBtn);
         alertDanger.appendChild(alertTitle);
         alertDanger.appendChild(seeProdBtn);
-        containerDiv.appendChild(alertPrimary);
         containerDiv.appendChild(alertDanger);
         cart_button.appendChild(containerDiv);
+        
     }
 
     return {
-        FinishButton,
+         prodView,
+         noProdView,
          runSpinner,
          goPage,
          productDetail,
@@ -256,6 +273,7 @@ const view = (shop => {
 
 })(shop);
 
-//view.productDetail();
-//view.renderShop();
-view.FinishButton();
+view.productDetail();
+view.renderShop();
+// view.noProdView();
+view.prodView();
