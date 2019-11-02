@@ -219,5 +219,5 @@ const view = (shop => {
 
 })(shop);
 
-//view.productDetail();
-view.renderShop();
+view.productDetail();
+//view.renderShop();
