@@ -143,7 +143,7 @@ const view = (shop => {
         const newCardBody = createElement('div', false, 'card-body');
         const newTitle = createElement('h4', false, 'card-title', title);
         const newDescr = createElement('p', false, 'card-text', description);
-        const newprice = createElement('h5', false, 'card-text', price);
+        const newprice = createElement('h3', false, 'card-text price', price);
         newCol1.appendChild(newImg);
         newCardBody.appendChild(newTitle);
         newCardBody.appendChild(newprice);
@@ -163,7 +163,7 @@ const view = (shop => {
         const newCardBody = createElement('div', false, 'card-body');
         const newTitle = createElement('h4', false, 'card-title', title);
         const newDescr = createElement('p', false, 'card-text', description);
-        const newprice = createElement('h3', false, 'card-text', price);
+        const newprice = createElement('h3', false, 'card-text price', price);
         newCard.appendChild(newImg);
         newCardBody.appendChild(newTitle);
         newCardBody.appendChild(newDescr);
@@ -181,10 +181,10 @@ const view = (shop => {
         const col2 = createElement('div', false, 'col-sm-6 col-md-3');
         const col3 = createElement('div', false, 'col-sm-6 col-md-3');
         const col4 = createElement('div', false, 'col-sm-6 col-md-3');
-        const card1 = createCard('Producto1', './images/products/tv.jpg', '2000', 'Modelo1', './detail.html');
-        const card2 = createCard('Producto2', './images/products/tv.jpg', '3000', 'Modelo2', './detail.html');
-        const card3 = createCard('Producto3', './images/products/tv.jpg', '4000', 'Modelo3', './detail.html');
-        const card4 = createCard('Producto4', './images/products/tv.jpg', '4000', 'Modelo4', './detail.html');
+        const card1 = createCard('Producto1', './images/products/tv.jpg', '$ 2000', 'Modelo1', './detail.html');
+        const card2 = createCard('Producto2', './images/products/tv.jpg', '$ 3000', 'Modelo2', './detail.html');
+        const card3 = createCard('Producto3', './images/products/tv.jpg', '$ 4000', 'Modelo3', './detail.html');
+        const card4 = createCard('Producto4', './images/products/tv.jpg', '$ 4000', 'Modelo4', './detail.html');
         col1.appendChild(card1);
         col2.appendChild(card2);
         col3.appendChild(card3);
@@ -198,9 +198,9 @@ const view = (shop => {
         const colH1 = createElement('div', false, 'col-md-4');
         const colH2 = createElement('div', false, 'col-md-4');
         const colH3 = createElement('div', false, 'col-md-4');
-        const cardH1 = createCardHor('Producto1', './images/products/tv.jpg', '2000', 'Modelo1', './detail.html');
-        const cardH2 = createCardHor('Producto2', './images/products/tv.jpg', '3000', 'Modelo2', './detail.html');
-        const cardH3 = createCardHor('Producto2', './images/products/tv.jpg', '3000', 'Modelo2', './detail.html');
+        const cardH1 = createCardHor('Producto1', './images/products/tv.jpg', '$ 2000', 'Modelo1', './detail.html');
+        const cardH2 = createCardHor('Producto2', './images/products/tv.jpg', '$ 3000', 'Modelo2', './detail.html');
+        const cardH3 = createCardHor('Producto2', './images/products/tv.jpg', '$ 3000', 'Modelo2', './detail.html');
         colH1.appendChild(cardH1);
         colH2.appendChild(cardH2);
         colH3.appendChild(cardH3);
@@ -219,5 +219,5 @@ const view = (shop => {
 
 })(shop);
 
-view.productDetail();
-//view.renderShop();
+//view.productDetail();
+view.renderShop();
