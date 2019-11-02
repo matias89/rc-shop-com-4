@@ -14,12 +14,22 @@ const shop = (() => {
         }
     }
 
-    const testFetch = () => {
+    const getProducts = () => {
         const requestProducts = fetch(url);
-        requestProducts.then(response => {
+        return requestProducts.then(response => {
             const r =response.json();
-            r.then(products => {
-                console.log(products);
+            return r.then(products => {
+                return products;
+            });
+        });
+    }
+
+    const getProduct = id => {
+        const requestProducts = fetch(`${url}/${id}`);
+        return requestProducts.then(response => {
+            const r =response.json();
+            return r.then(products => {
+                return products;
             });
         });
     }
@@ -62,7 +72,8 @@ const shop = (() => {
         getItem,
         removeFromCart,
         doCheckout,
-        testFetch
+        getProduct,
+        getProducts
     }
 })();
 

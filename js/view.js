@@ -87,60 +87,64 @@ const view = (shop => {
         return elm
     }
 
-    const productDetail = () => {
-        const item = {
-            "inches": 75,
-            "screenType": "Led",
-            "resolution": "4k uhd",
-            "weigth": 3.8,
-            "Bluetooth": "NO",
-            "WiFi": "INTEGRADO",
-            "guarantee": "12 MESES"        
-        };
-        const addEvent = [{
-            type: 'onclick',
-            fn: shop.addToCart
-            }
-        ];
-        const titledetail = createElement('h1', 'td', 'bold', 'TV SMART 4K UHD')
-        const daddy = createElement ('div', 'daddy', 'container border border-primary my-2 p-3', false, false, false,false,false);
-        const title = createElement('h4', 'title', 'bold', 'General description',false, false, false, false);
-        const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
-        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit', false, false, false, false, addEvent);
-        const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
-        const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
-        const ul = createElement('ul',false);
-        const li1Content = `<h6 class="d-inline"> Inches: </h6> ${item.inches}`;
-        const li2Content = `<h6 class="d-inline"> Screen Type: </h6> ${item.screenType}`;
-        const li3Content = `<h6 class="d-inline"> Resolution: </h6> ${item.resolution}`;
-        const li4Content = `<h6 class="d-inline"> Weight: </h6> ${item.weigth}`;
-        const li5Content = `<h6 class="d-inline"> Bluetooth: </h6> ${item.Bluetooth}`;
-        const li6Content = `<h6 class="d-inline"> WiFi: </h6> ${item.WiFi}`;
-        const li7Content = `<h6 class="d-inline"> Guarantee: </h6> ${item.guarantee}`;
-        const li1 = createElement('li', false, false, li1Content);
-        const li2 = createElement('li',false, false, li2Content);
-        const li3 = createElement('li',false, false, li3Content);
-        const li4 = createElement('li',false, false, li4Content);
-        const li5 = createElement('li',false, false, li5Content);
-        const li6 = createElement('li',false, false, li6Content);
-        const li7 = createElement('li',false, false, li7Content);
-        ul.appendChild(li1);
-        ul.appendChild(li2);
-        ul.appendChild(li3);
-        ul.appendChild(li4);
-        ul.appendChild(li5);
-        ul.appendChild(li6);
-        ul.appendChild(li7);
-        const detailtitle = document.getElementById('detailtitle');
-        const features = document.getElementById('features');
-        daddy.appendChild(title);
-        daddy.appendChild(description);
-        daddy1.appendChild(title1);
-        daddy1.appendChild(ul);
-        features.appendChild(daddy);
-        detailtitle.appendChild(titledetail);
-        features.appendChild(daddy1);
-        features.appendChild(button);  
+    const productDetail = id => {
+        const prodRequest = shop.getProduct(id);
+        prodRequest.then(prod => {
+            console.log(prod);
+            const item = {
+                "inches": 75,
+                "screenType": "Led",
+                "resolution": "4k uhd",
+                "weigth": 3.8,
+                "Bluetooth": "NO",
+                "WiFi": "INTEGRADO",
+                "guarantee": "12 MESES"        
+            };
+            const addEvent = [{
+                type: 'onclick',
+                fn: shop.addToCart
+                }
+            ];
+            const titledetail = createElement('h1', 'td', 'bold', prod.title)
+            const daddy = createElement ('div', 'daddy', 'container border border-primary my-2 p-3', false, false, false,false,false);
+            const title = createElement('h4', 'title', 'bold', 'General description',false, false, false, false);
+            const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
+            const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit', false, false, false, false, addEvent);
+            const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
+            const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
+            const ul = createElement('ul',false);
+            const li1Content = `<h6 class="d-inline"> Inches: </h6> ${item.inches}`;
+            const li2Content = `<h6 class="d-inline"> Screen Type: </h6> ${item.screenType}`;
+            const li3Content = `<h6 class="d-inline"> Resolution: </h6> ${item.resolution}`;
+            const li4Content = `<h6 class="d-inline"> Weight: </h6> ${item.weigth}`;
+            const li5Content = `<h6 class="d-inline"> Bluetooth: </h6> ${item.Bluetooth}`;
+            const li6Content = `<h6 class="d-inline"> WiFi: </h6> ${item.WiFi}`;
+            const li7Content = `<h6 class="d-inline"> Guarantee: </h6> ${item.guarantee}`;
+            const li1 = createElement('li', false, false, li1Content);
+            const li2 = createElement('li',false, false, li2Content);
+            const li3 = createElement('li',false, false, li3Content);
+            const li4 = createElement('li',false, false, li4Content);
+            const li5 = createElement('li',false, false, li5Content);
+            const li6 = createElement('li',false, false, li6Content);
+            const li7 = createElement('li',false, false, li7Content);
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+            ul.appendChild(li3);
+            ul.appendChild(li4);
+            ul.appendChild(li5);
+            ul.appendChild(li6);
+            ul.appendChild(li7);
+            const detailtitle = document.getElementById('detailtitle');
+            const features = document.getElementById('features');
+            daddy.appendChild(title);
+            daddy.appendChild(description);
+            daddy1.appendChild(title1);
+            daddy1.appendChild(ul);
+            features.appendChild(daddy);
+            detailtitle.appendChild(titledetail);
+            features.appendChild(daddy1);
+            features.appendChild(button); 
+        }); 
     }  
     
     const createCardHor = (title, srcImg, price, description, url) => {
@@ -184,25 +188,40 @@ const view = (shop => {
     }
 
     const renderShop = () => {
+        const productsRequest = shop.getProducts();
+        const row = createElement('div', false, 'row my-2');
+        productsRequest.then(productsShop => {
+            for (let i = 0; i < productsShop.length; i++) {
+                const prod = productsShop[i];
+                let prodImg = '';
+                if (prod.images && prod.images.length) {
+                    prodImg = prod.images[0].path;
+                }
+                const col1 = createElement('div', false, 'col-sm-6 col-md-3');
+                const card1 = createCard(prod.title, `./images/${prodImg}`, `$ ${prod.price}`, prod.model, `./detail.html#${prod.id}`);
+                col1.appendChild(card1);
+                row.appendChild(col1);
+            }
+        });
         const shopElement = document.getElementById('shop');
         shopElement.className = 'container';
-        const row = createElement('div', false, 'row my-2');
-        const col1 = createElement('div', false, 'col-sm-6 col-md-3');
-        const col2 = createElement('div', false, 'col-sm-6 col-md-3');
-        const col3 = createElement('div', false, 'col-sm-6 col-md-3');
-        const col4 = createElement('div', false, 'col-sm-6 col-md-3');
-        const card1 = createCard('Producto1', './images/products/tv.jpg', '$ 2000', 'Modelo1', './detail.html');
-        const card2 = createCard('Producto2', './images/products/tv.jpg', '$ 3000', 'Modelo2', './detail.html');
-        const card3 = createCard('Producto3', './images/products/tv.jpg', '$ 4000', 'Modelo3', './detail.html');
-        const card4 = createCard('Producto4', './images/products/tv.jpg', '$ 4000', 'Modelo4', './detail.html');
-        col1.appendChild(card1);
-        col2.appendChild(card2);
-        col3.appendChild(card3);
-        col4.appendChild(card4);
-        row.appendChild(col1);
-        row.appendChild(col2);
-        row.appendChild(col3);
-        row.appendChild(col4);
+        
+        
+        //const col2 = createElement('div', false, 'col-sm-6 col-md-3');
+        //const col3 = createElement('div', false, 'col-sm-6 col-md-3');
+        //const col4 = createElement('div', false, 'col-sm-6 col-md-3');
+        
+        //const card2 = createCard('Producto2', './images/products/tv.jpg', '$ 3000', 'Modelo2', './detail.html');
+        //const card3 = createCard('Producto3', './images/products/tv.jpg', '$ 4000', 'Modelo3', './detail.html');
+        //const card4 = createCard('Producto4', './images/products/tv.jpg', '$ 4000', 'Modelo4', './detail.html');
+        
+        //col2.appendChild(card2);
+        //col3.appendChild(card3);
+        //col4.appendChild(card4);
+        
+        //row.appendChild(col2);
+        //row.appendChild(col3);
+        //row.appendChild(col4);
         shopElement.appendChild(row);     
         const row2 = createElement('div', false, 'row my-2');   
         const colH1 = createElement('div', false, 'col-md-4');
@@ -277,4 +296,4 @@ const view = (shop => {
 })(shop);
 
 //view.productDetail();
-view.renderShop();
+// view.renderShop();
