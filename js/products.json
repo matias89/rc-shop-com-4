@@ -1,7 +1,7 @@
 {
   "products": [{
     "title":"SMART TV",
-    "id": 8,
+    "id": 0,
     "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
     "description": "Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.",
     "features": {
@@ -16,16 +16,260 @@
     "price": 169.999,
     "images": [{
       "title": "Sony 4k ",
-      "path": "4kuhd.jpg"
+      "path": "tv1.jpg"
     },
     {
         "title": "Sony 4k ",
-        "path":"tvsmart.jpg"
-    }]
+        "path":"tv11.jpg"
+    },
+    {
+      "title": "Sony 4k ",
+      "path":"tv111.jpg"
+  }]
   },
   {
    "title":"SMART TV",
-   "id": 0,
+   "id": 1,
+   "model": "Sony Smart Tv 645 Pulgadas Xbr65a8g",
+   "description":"Smart TV OLED (Android TV) 65\" 4K. HDR UHD (3840 x 2160). Potencia 10w + 10w. Sonido Dolby, DTS Digital Surround,Clear Audio+. Wi Fi. HDMI x 4. Bluetooth 4.1. USB x 3. Soporte de sobremesa, Baterías, control remoto, instrucciones, cable de alimentación.",
+   "features":{
+     "inches": 75,
+     "screenType": "Led",
+     "resolution": "3840 X 2160",
+     "weigth": 90.1,
+     "Bluetooth": "SI",
+     "WiFi": "INTEGRADO",
+     "guarantee": "18 MESES"        
+   },
+   "price": 301.599,
+   "images": [{
+     "title": "Sony 4k ",
+     "path": "tv2.jpg"
+   },
+   {
+       "title": "Sony 4k ",
+       "path":"tvs22.jpg"
+   }
+    ]
+ },
+ {
+   "title":"SMART TV",
+   "id": 2,
+   "model": "Sony Smart Tv 75 Pulgadas Xbr75x805g Ar4",
+   "description": "Smart TV (Android TV) 75\" 4K HDR UHD (3840 x 2160). Potencia 10w + 10w. Sonido Dolby, DTS Digital Surround,Clear Audio+. Wi Fi. HDMI x 4. Bluetooth 4.1. USB x 3. Soporte de sobremesa, Baterías, control remoto, instrucciones, cable de alimentación.",
+   "features": [{
+     "inches": 75,
+     "screenType": "Led",
+     "resolution": "3840 X 2160",
+     "weigth": 97.103,
+     "Bluetooth": "SI",
+     "WiFi": "INTEGRADO",
+     "guarantee": "14 MESES"        
+   }],
+   "price": 159.999,
+   "images": [{
+     "title": "Sony Smart",
+     "path": "tv3.jpg"
+   },
+   {
+       "title": "Sony 4k ",
+       "path":"tv33.jpg"
+   }
+      ]
+ },
+ {
+   "title":"NOTEBOOK",
+   "id": 3,
+   "model": "Notebook HP GAMER 15 DC0052LA INTEL CORE I5",
+   "description": "Proc.8va Gen.Intel Core i5-8300H QC 2.3Ghz. Mem.RAM 8Gb DDR4. Disco duro 1Tb Sata. Pant.LED 15.6\"FHD. Wi-Fi/Bluetooth 5 combinado. Gráficos Nividia GeForce GTX1050 Ti. Webcam HD c/2 micróf.dig.integ. Sonido Bang & Olufsen. SO Windows 10 Home.",
+   "features": {
+     "inches": 15.6,
+     "screenType": "FHD",
+     "resolution": "26.29",
+     "weigth": 2.59,
+     "Bluetooth": "SI",
+     "WiFi": "SI",
+     "guarantee": "10 MESES"        
+   },
+   "price": 89.999,
+   "images": [{
+     "title": "Notebook HP",
+     "path": "ntb1.jpg"
+   },
+   {
+       "title": "Notebook HP",
+       "path":"ntb22.jpg"
+   }
+      ]
+ },
+ {
+   "title":"NOTEBOOK",
+   "id": 4,
+   "model": "Notebook LENOVO 81LK007GAR INTEL CORE I5",
+   "description":"Proc.Intel Core I5-9300H. Mem.RAM 8Gb DDR4. Disco duro 1Tb. Pant.15.6\"FHD IPS. Gráficos GTX1050 3GB G5 96B. Webcam HD 720p. Wi-Fi. Bluetooth 4. HDMI. USB 3.0X2 y 1 tipo C. Teclado iluminado.SO Windows 10 Home High End Em",
+   "features": {
+     "inches": 15.6,
+     "screenType": "IPS FHD",
+     "resolution": "36.3",
+     "weigth": 2.39,
+     "Bluetooth": "SI",
+     "WiFi": "SI",
+     "guarantee": "24 MESES"        
+   },
+   "price": 69.999,
+   "images": [{
+     "title": "LENOVO NTB",
+     "path": "ntb44.jpg"
+   },
+   {
+       "title": "LENOVO NTB",
+       "path":"ntb4.jpg"
+   },
+   {
+    "title": "LENOVO NTB",
+    "path":"ntb444.jpg"
+}
+      ]
+ },
+ {
+   "title":"NOTEBOOK",
+   "id": 5,
+   "model": "Notebook DELL INSPIRON 3583 INTEL CORE I7 8A. GENERACIóN",
+   "description":"Proc. Intel Core I7-8550U. Vel.proc. 1.8Ghz. Pantalla FHD 15.6\". S.O. Windows 10 Home. Cap. 1Tb / RAM 8Gb. Placa de video NVIDIA GeForce. Lector de tarjetas. Wi Fi. Bluetooth. USB. HDMI. Conector combinado Aur/Mic. Camara web c/mic. inc. Bat.3celdas 41W",
+   "features": {
+     "inches": 15.6,
+     "screenType": "Led",
+     "resolution": "37.53",
+     "weigth": 2.26,
+     "Bluetooth": "SI",
+     "WiFi": "INTEGRADO",
+     "guarantee": "12 MESES"        
+   },
+   "price": 55.999,
+   "images": [{
+     "title": "NTB DELL",
+     "path": "ntb5.jpg"
+   },
+   {
+       "title": "NTB DELL",
+       "path":"ntb55.jpg"
+   },
+   {
+    "title": "NTB DELL",
+    "path":"ntb555.jpg"
+}
+      ]
+ },
+ {
+   "title":"PLAY",
+   "id": 6,
+   "model": "Consolas De Video Juegos Sony Consola Ps4 Cuh2215b 1 Tb",
+   "description":"Slim. 1 Tb. Control inalambrico. Cable HDMI. Cable de alimentacion. Auricular monoaural c/cable. CAble USB de carga. Juegos ( Days Gone - Detroit: Become Human - Tom Clancy´s Rainbow Six ). Cupon de contenido descargable.",
+   "features": {
+     "inches": "NONE",
+     "screenType": "NONE",
+     "resolution": "NONE",
+     "weigth": 42.72,
+     "Bluetooth": "SI",
+     "WiFi": "INTEGRADO",
+     "guarantee": "12 MESES"        
+   },
+   "price": 45.899,
+   "images": [{
+     "title": "PLAY 1",
+     "path": "play1.jpg"
+   },
+   {
+       "title": "PLAY 1",
+       "path":"play11.jpg"
+   },
+   {
+    "title": "PLAY 1",
+    "path":"play111.jpg"
+}
+      ]
+ },
+ {
+   "title":"PLAY",
+   "id": 7,
+   "model": "Consolas De Video Juegos Microsoft Consola Xbox One S Xbox One S 1tb All Digedes A 1 Tb",
+   "description":"No reproduce discos físicos. Los juegos son descargados y están listos para jugar en cualquier momento. Incluye: Consola Xbox One S de 1TN Edición All-Digital (juego sin disco), control inalambrico, suscripción de Xbox Live Gold por un mes.",
+   "features": {
+     "inches": "NONE",
+     "screenType": "NONE",
+     "resolution": "NONE",
+     "weigth": 3,
+     "Bluetooth": "SI",
+     "WiFi": "INTEGRADO",
+     "guarantee": "18 MESES"        
+   },
+   "price": 29.999,
+   "images": [{
+     "title": "PLAY 2",
+     "path": "play2.jpg"
+   },
+   {
+       "title": "PLAY 2",
+       "path":"play22.jpg"
+   }
+      ]
+ },
+ {
+   "title":"PLAY",
+   "id": 8,
+   "model": "Varios Logitech Volante Driving Force G920",
+   "features": {
+     "inches": false,
+     "screenType": false,
+     "resolution": false,
+     "weigth": false,
+     "Bluetooth": "SI",
+     "WiFi": "INTEGRADO",
+     "guarantee": "24 MESES"        
+   },
+   "price": 35.499,
+   "images": [{
+     "title": "PLAY 3",
+     "path": "play3.jpg"
+   },
+   {
+       "title": "Sony 4k ",
+       "path":"play33.jpg"
+   }
+      ]
+ },
+ {
+   "title":"PLAY",
+   "id": 9,
+   "model": "Juegos Ps4 Activision Juego Ps4 0",
+   "description":"Este producto no posee una descripción",
+   "features": {
+     "inches": false,
+     "screenType": false,
+     "resolution": false,
+     "weigth": false,
+     "Bluetooth": "SI",
+     "WiFi": "INTEGRADO",
+     "guarantee": "12 MESES"        
+   },
+   "price": 4.999,
+   "images": [{
+     "title": "PLAY 4",
+     "path": "play4.jpg"
+   },
+   {
+       "title": "Sony 4k ",
+       "path":"play44.jpg"
+   },
+   {
+    "title": "Sony 4k ",
+    "path":"play444.jpg"
+}
+      ]
+ },
+ {
+   "title":"SMART TV",
+   "id": 10,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -49,7 +293,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
+   "id": 11,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -73,7 +317,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
+   "id": 12,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -97,223 +341,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
-   "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-   "features": [{
-     "inches": 75,
-     "screenType": "Led",
-     "resolution": "4k uhd",
-     "weigth": 3.8,
-     "Bluetooth": "NO",
-     "WiFi": "INTEGRADO",
-     "guarantee": "12 MESES"        
-   }],
-   "price": 169.999,
-   "images": [{
-     "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
-   },
-   {
-       "title": "Sony 4k ",
-       "path":"tvsmart.jpg"
-   }
-      ]
- },
- {
-   "title":"SMART TV",
-   "id": 0,
-   "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-   "features": [{
-     "inches": 75,
-     "screenType": "Led",
-     "resolution": "4k uhd",
-     "weigth": 3.8,
-     "Bluetooth": "NO",
-     "WiFi": "INTEGRADO",
-     "guarantee": "12 MESES"        
-   }],
-   "price": 169.999,
-   "images": [{
-     "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
-   },
-   {
-       "title": "Sony 4k ",
-       "path":"tvsmart.jpg"
-   }
-      ]
- },
- {
-   "title":"SMART TV",
-   "id": 0,
-   "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-   "features": [{
-     "inches": 75,
-     "screenType": "Led",
-     "resolution": "4k uhd",
-     "weigth": 3.8,
-     "Bluetooth": "NO",
-     "WiFi": "INTEGRADO",
-     "guarantee": "12 MESES"        
-   }],
-   "price": 169.999,
-   "images": [{
-     "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
-   },
-   {
-       "title": "Sony 4k ",
-       "path":"tvsmart.jpg"
-   }
-      ]
- },
- {
-   "title":"SMART TV",
-   "id": 0,
-   "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-   "features": [{
-     "inches": 75,
-     "screenType": "Led",
-     "resolution": "4k uhd",
-     "weigth": 3.8,
-     "Bluetooth": "NO",
-     "WiFi": "INTEGRADO",
-     "guarantee": "12 MESES"        
-   }],
-   "price": 169.999,
-   "images": [{
-     "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
-   },
-   {
-       "title": "Sony 4k ",
-       "path":"tvsmart.jpg"
-   }
-      ]
- },
- {
-   "title":"SMART TV",
-   "id": 0,
-   "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-   "features": [{
-     "inches": 75,
-     "screenType": "Led",
-     "resolution": "4k uhd",
-     "weigth": 3.8,
-     "Bluetooth": "NO",
-     "WiFi": "INTEGRADO",
-     "guarantee": "12 MESES"        
-   }],
-   "price": 169.999,
-   "images": [{
-     "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
-   },
-   {
-       "title": "Sony 4k ",
-       "path":"tvsmart.jpg"
-   }
-      ]
- },
- {
-   "title":"SMART TV",
-   "id": 0,
-   "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-   "features": [{
-     "inches": 75,
-     "screenType": "Led",
-     "resolution": "4k uhd",
-     "weigth": 3.8,
-     "Bluetooth": "NO",
-     "WiFi": "INTEGRADO",
-     "guarantee": "12 MESES"        
-   }],
-   "price": 169.999,
-   "images": [{
-     "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
-   },
-   {
-       "title": "Sony 4k ",
-       "path":"tvsmart.jpg"
-   }
-      ]
- },
- {
-   "title":"SMART TV",
-   "id": 0,
-   "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-   "features": [{
-     "inches": 75,
-     "screenType": "Led",
-     "resolution": "4k uhd",
-     "weigth": 3.8,
-     "Bluetooth": "NO",
-     "WiFi": "INTEGRADO",
-     "guarantee": "12 MESES"        
-   }],
-   "price": 169.999,
-   "images": [{
-     "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
-   },
-   {
-       "title": "Sony 4k ",
-       "path":"tvsmart.jpg"
-   }
-      ]
- },
- {
-   "title":"SMART TV",
-   "id": 0,
-   "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-   "features": [{
-     "inches": 75,
-     "screenType": "Led",
-     "resolution": "4k uhd",
-     "weigth": 3.8,
-     "Bluetooth": "NO",
-     "WiFi": "INTEGRADO",
-     "guarantee": "12 MESES"        
-   }],
-   "price": 169.999,
-   "images": [{
-     "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
-   },
-   {
-       "title": "Sony 4k ",
-       "path":"tvsmart.jpg"
-   }
-      ]
- },
- {
-   "title":"SMART TV",
-   "id": 0,
-   "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
-   "features": [{
-     "inches": 75,
-     "screenType": "Led",
-     "resolution": "4k uhd",
-     "weigth": 3.8,
-     "Bluetooth": "NO",
-     "WiFi": "INTEGRADO",
-     "guarantee": "12 MESES"        
-   }],
-   "price": 169.999,
-   "images": [{
-     "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
-   },
-   {
-       "title": "Sony 4k ",
-       "path":"tvsmart.jpg"
-   }
-      ]
- },
- {
-   "title":"SMART TV",
-   "id": 0,
+   "id": 13,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
