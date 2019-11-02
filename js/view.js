@@ -1,7 +1,7 @@
 const view = (shop => {
 
     const runSpinner = (activeSpinner) => {        
-        const btnfinish = document.getElementById('btn-finish');
+        const btnfinish = document.getElementById('endShopButton');
         btnfinish.disabled = true;        
         const spinnerblock = document.getElementById('spinner');
         if (activeSpinner) {
@@ -51,8 +51,9 @@ const view = (shop => {
         }
     } 
 
-    const createElement = (element, id, className, html, type, placeholder, src, display, href) => {
+    const createElement = (element, id, className, html, type, placeholder, src, display, href, events) => {
         const elm = document.createElement(element);
+
         if (id) {
             elm.id = id;
         }
@@ -77,18 +78,16 @@ const view = (shop => {
         if (href) {
             elm.href = href;
         }
+        if (events && events.length) {
+            for (let i = 0; i < events.length; i++) {
+                const ev = events[i];
+                elm[ev.type] = ev.fn; // elm.onclick = () => { console.log('') }
+            }
+        }
         return elm
     }
 
     const productDetail = () => {
-        const titledetail = createElement('h1', 'td', 'bold', 'TV SMART 4K UHD')
-        const daddy = createElement ('div', 'daddy', 'container border border-primary my-2 p-3', false, false, false,false,false);
-        const title = createElement('h4', 'title', 'bold', 'General description',false, false, false, false);
-        const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
-        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit');
-        const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
-        const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
-        const ul = createElement('ul',false);
         const item = {
             "inches": 75,
             "screenType": "Led",
@@ -98,6 +97,19 @@ const view = (shop => {
             "WiFi": "INTEGRADO",
             "guarantee": "12 MESES"        
         };
+        const addEvent = [{
+            type: 'onclick',
+            fn: shop.addToCart
+            }
+        ];
+        const titledetail = createElement('h1', 'td', 'bold', 'TV SMART 4K UHD')
+        const daddy = createElement ('div', 'daddy', 'container border border-primary my-2 p-3', false, false, false,false,false);
+        const title = createElement('h4', 'title', 'bold', 'General description',false, false, false, false);
+        const description = createElement('p', 'description', false, 'Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.', false, false, false, false);
+        const button = createElement('button', 'addbutton', 'btn btn-primary ml-auto float-right', 'Add to Cart', 'submit', false, false, false, false, addEvent);
+        const daddy1 = createElement('div', 'daddy1', 'container border border-primary my-2 p-3', false, false, false,false,false);
+        const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
+        const ul = createElement('ul',false);
         const li1Content = `<h6 class="d-inline"> Inches: </h6> ${item.inches}`;
         const li2Content = `<h6 class="d-inline"> Screen Type: </h6> ${item.screenType}`;
         const li3Content = `<h6 class="d-inline"> Resolution: </h6> ${item.resolution}`;
@@ -128,9 +140,7 @@ const view = (shop => {
         features.appendChild(daddy);
         detailtitle.appendChild(titledetail);
         features.appendChild(daddy1);
-        features.appendChild(button);
-        
-        
+        features.appendChild(button);  
     }  
     
     const createCardHor = (title, srcImg, price, description, url) => {
@@ -209,8 +219,55 @@ const view = (shop => {
         row2.appendChild(colH3);
         shopElement.appendChild(row2); 
     }
-    
+    // Vista en cart.html cuando hay productos cargados en el carrito
+    const prodView = () => {
+        const addEvent = [{
+            type: 'onclick',
+            fn: runSpinner
+            }
+        ];
+        const addEvent1 = [{
+            type: 'onclick',
+            fn: () => {
+                location.href= './index.html'
+            }
+            }
+        ];
+        const cart_button = document.getElementById('cart_button');
+        const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false);
+        const alertPrimary = createElement('div', 'alertPrimary', 'alert alert-primary text-center', false, );
+        const endShopBtn = createElement('button','endShopButton', 'btn btn-primary mx-4 my-2', '<span>Finalizar compra</span>', false, false, false, false, false, addEvent);
+        const contShopBtn = createElement('button', 'contShopBtn', 'btn btn-primary mx-4 my-2', '<span>Seguir comprando</span>', 'button', false, false, false, false, addEvent1);
+        alertPrimary.appendChild(endShopBtn);
+        alertPrimary.appendChild(contShopBtn);
+        
+        containerDiv.appendChild(alertPrimary);
+        cart_button.appendChild(containerDiv);
+    }
+    // Vista en cart.html cuando no hay  productos guardados en el carrito
+    const noProdView = () => {
+        const cart_button = document.getElementById('cart_button');
+        const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false);
+        const alertDanger = createElement('div', 'alertDanger', 'alert alert-danger text-center');
+        const alertTitle = createElement('h1', 'alertTitle', false, 'Alerta!!! No has cargado ningún producto');
+        const seeProdBtn = createElement('button', 'seeProdBtn', 'btn btn-primary w-50 align-middle', 'Ver productos', false, false, false, false, false, false);
+        alertDanger.appendChild(alertTitle);
+        alertDanger.appendChild(seeProdBtn);
+        containerDiv.appendChild(alertDanger);
+        cart_button.appendChild(containerDiv);
+        
+    }
+    const diff = () => {
+        let productsInCart = shop.getItem();
+        console.log(productsInCart);
+        if (productsInCart) {
+            prodView();
+        } else {
+            noProdView();
+        }
+    }
     return {
+         prodView,
          runSpinner,
          goPage,
          productDetail,
