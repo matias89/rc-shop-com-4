@@ -2,19 +2,6 @@ const shop = (() => {
     const key = 'productsInCart'
     const url = 'http://localhost:3000/products';
     //Funcion para agregar los productos al carrito 
-<<<<<<< Updated upstream
-    const addToCart = (item) => {
-        item.quantity = 1; 
-        const prod = getItem(key);
-        if (prod) {
-            prod.push(item);
-            setItem(key, prod);
-        }
-        else {
-            setItem(key, [prod]);
-        }
-    }
-=======
     const addToCart = () => {
         const prodRequest = getProduct();
         prodRequest.then(prod => {
@@ -47,7 +34,6 @@ const shop = (() => {
         timer2();
     };
 
->>>>>>> Stashed changes
 
     const getProducts = () => {
         const requestProducts = fetch(url);
