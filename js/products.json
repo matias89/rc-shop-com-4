@@ -69,7 +69,7 @@
    "price": 159.999,
    "images": [{
      "title": "Sony Smart",
-     "path": "tv3.jpg"
+     "path": "tv3.png"
    },
    {
        "title": "Sony 4k ",
@@ -94,7 +94,7 @@
    "price": 89.999,
    "images": [{
      "title": "Notebook HP",
-     "path": "ntb1.jpg"
+     "path": "ntb1.png"
    },
    {
        "title": "Notebook HP",
@@ -123,7 +123,7 @@
    },
    {
        "title": "LENOVO NTB",
-       "path":"ntb4.jpg"
+       "path":"ntb4.png"
    },
    {
     "title": "LENOVO NTB",
@@ -148,7 +148,7 @@
    "price": 55.999,
    "images": [{
      "title": "NTB DELL",
-     "path": "ntb5.jpg"
+     "path": "ntb5.png"
    },
    {
        "title": "NTB DELL",
@@ -177,7 +177,7 @@
    "price": 45.899,
    "images": [{
      "title": "PLAY 1",
-     "path": "play1.jpg"
+     "path": "play1.png"
    },
    {
        "title": "PLAY 1",
@@ -283,7 +283,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv22.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -307,7 +307,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv11.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -331,7 +331,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv111.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -355,7 +355,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv1.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -365,7 +365,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
+   "id": 14,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -379,7 +379,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv1.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -389,7 +389,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
+   "id": 15,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -403,7 +403,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv1.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -413,7 +413,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
+   "id": 16,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -427,7 +427,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv1.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -437,7 +437,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
+   "id": 17,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -451,7 +451,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv1.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -461,7 +461,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
+   "id": 18,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -475,7 +475,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv1.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -485,7 +485,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
+   "id": 19,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -499,7 +499,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv1.jpg"
    },
    {
        "title": "Sony 4k ",
@@ -509,7 +509,7 @@
  },
  {
    "title":"SMART TV",
-   "id": 0,
+   "id": 20,
    "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
    "features": [{
      "inches": 75,
@@ -523,7 +523,7 @@
    "price": 169.999,
    "images": [{
      "title": "Sony 4k ",
-     "path": "4kuhd.jpg"
+     "path": "tv1.jpg"
    },
    {
        "title": "Sony 4k ",
