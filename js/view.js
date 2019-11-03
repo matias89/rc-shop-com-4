@@ -88,7 +88,7 @@ const view = (shop => {
     }
 
     const productDetail = id => {
-        const prodRequest = shop.getProduct(id);
+        const prodRequest = shop.getProduct();
         prodRequest.then(prod => {
             console.log(prod);
             const item = {
@@ -103,7 +103,7 @@ const view = (shop => {
             const addEvent = [{
                 type: 'onclick',
                 fn: shop.addToCart
-                }
+                },
             ];
             const titledetail = createElement('h1', 'td', 'bold', prod.title)
             const daddy = createElement ('div', 'daddy', 'container border border-primary my-2 p-3', false, false, false,false,false);
@@ -263,13 +263,21 @@ const view = (shop => {
         containerDiv.appendChild(alertPrimary);
         cart_button.appendChild(containerDiv);
     }
+
     // Vista en cart.html cuando no hay  productos guardados en el carrito
     const noProdView = () => {
+        const keepShopping = [{
+            type: 'onclick',
+            fn: () => {
+                location.href= './index.html'
+            }
+            }
+        ];
         const cart_button = document.getElementById('cart_button');
         const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false);
         const alertDanger = createElement('div', 'alertDanger', 'alert alert-danger text-center');
         const alertTitle = createElement('h1', 'alertTitle', false, 'Alerta!!! No has cargado ningún producto');
-        const seeProdBtn = createElement('button', 'seeProdBtn', 'btn btn-primary w-50 align-middle', 'Ver productos', false, false, false, false, false, false);
+        const seeProdBtn = createElement('button', 'seeProdBtn', 'btn btn-primary w-50 align-middle', 'Ver productos', false, false, false, false, false, keepShopping);
         alertDanger.appendChild(alertTitle);
         alertDanger.appendChild(seeProdBtn);
         containerDiv.appendChild(alertDanger);
@@ -277,16 +285,17 @@ const view = (shop => {
         
     }
     const diff = () => {
-        let productsInCart = shop.getItem();
-        console.log(productsInCart);
+        let productsInCart = localStorage.getItem('productsInCart');
+        // console.log(productsInCart);
         if (productsInCart) {
             prodView();
         } else {
             noProdView();
         }
     }
+    
     return {
-         prodView,
+         diff,
          runSpinner,
          goPage,
          productDetail,

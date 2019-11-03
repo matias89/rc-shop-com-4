@@ -2,6 +2,7 @@ const shop = (() => {
     const key = 'productsInCart'
     const url = 'http://localhost:3000/products';
     //Funcion para agregar los productos al carrito 
+<<<<<<< Updated upstream
     const addToCart = (item) => {
         item.quantity = 1; 
         const prod = getItem(key);
@@ -13,6 +14,40 @@ const shop = (() => {
             setItem(key, [prod]);
         }
     }
+=======
+    const addToCart = () => {
+        const prodRequest = getProduct();
+        prodRequest.then(prod => {
+            // console.log(prod);
+            prod.quantity = 1;
+            let local = localStorage.getItem(key);
+            console.log(typeof key);
+            console.log(typeof JSON.parse(local));
+            if (local && local.length) {
+                var a = [];
+                a = JSON.parse(localStorage.getItem(key));
+                a.push(prod)
+                // console.log(a);
+                localStorage.setItem(key, JSON.stringify(a));
+                // console.log(prod);
+            }
+            else {
+                setItem(key, [prod]);
+                // console.log(prod);
+            }
+        })
+        const timer2 = () => {       
+            const random = new Promise((resolve, reject) => {            
+                setTimeout(() => {
+                    resolve(location.href= 'cart.html');
+                }, 1000);
+            });
+            return random;
+        }
+        timer2();
+    };
+
+>>>>>>> Stashed changes
 
     const getProducts = () => {
         const requestProducts = fetch(url);
@@ -66,6 +101,7 @@ const shop = (() => {
         let item = JSON.stringify(value);
         localStorage.setItem(key, item);
     }
+    
     return {
         addToCart,
         modifyFromCart,
