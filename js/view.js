@@ -90,7 +90,7 @@ const view = (shop => {
     const productDetail = id => {
         const prodRequest = shop.getProduct(id);
         prodRequest.then(prod => {
-            console.log(prod);
+            // console.log(prod);
             const item = {
                 "inches": 75,
                 "screenType": "Led",
@@ -100,7 +100,8 @@ const view = (shop => {
                 "WiFi": "INTEGRADO",
                 "guarantee": "12 MESES"        
             };
-            const addEvent = [{
+            const addEvent = [
+                {
                 type: 'onclick',
                 fn: shop.addToCart
                 }
@@ -295,7 +296,7 @@ const view = (shop => {
 
 })(shop);
 
-view.testMethod();
-view.show();
+// view.testMethod();
+// view.show();
 //view.productDetail();
 // view.renderShop();
