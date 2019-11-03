@@ -1,8 +1,9 @@
 const shop = (() => {
     const key = 'productsInCart'
+    const url = 'http://localhost:3000/products';
     //Funcion para agregar los productos al carrito 
     const addToCart = (item) => {
-        item.quantity = 1;
+        item.quantity = 1; 
         const prod = getItem(key);
         if (prod) {
             prod.push(item);
@@ -11,6 +12,26 @@ const shop = (() => {
         else {
             setItem(key, [prod]);
         }
+    }
+
+    const getProducts = () => {
+        const requestProducts = fetch(url);
+        return requestProducts.then(response => {
+            const r =response.json();
+            return r.then(products => {
+                return products;
+            });
+        });
+    }
+
+    const getProduct = id => {
+        const requestProducts = fetch(`${url}/${id}`);
+        return requestProducts.then(response => {
+            const r =response.json();
+            return r.then(products => {
+                return products;
+            });
+        });
     }
     // Modifica los productos en el carrito
     const modifyFromCart = (item, _quantity) => {
@@ -41,14 +62,18 @@ const shop = (() => {
         let item = JSON.parse(localStorage.getItem(key));
         return item;
     }
-    const setItem = (itemFromLocalStorage) => {
-        let item = JSON.stringify(itemFromLocalStorage);
+    const setItem = (key, value) => {
+        let item = JSON.stringify(value);
         localStorage.setItem(key, item);
     }
     return {
         addToCart,
         modifyFromCart,
+        getItem,
         removeFromCart,
-        doCheckout
+        doCheckout,
+        getProduct,
+        getProducts
     }
 })();
+
