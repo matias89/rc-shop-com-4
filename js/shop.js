@@ -2,17 +2,36 @@ const shop = (() => {
     const key = 'productsInCart'
     const url = 'http://localhost:3000/products';
     //Funcion para agregar los productos al carrito 
-    const addToCart = (item) => {
-        item.quantity = 1; 
-        const prod = getItem(key);
-        if (prod) {
-            prod.push(item);
-            setItem(key, prod);
+    const addToCart = () => {
+        const prodRequest = getProduct();
+        prodRequest.then(prod => {
+            // console.log(prod);
+            prod.quantity = 1;
+            let local = localStorage.getItem(key);
+            if (local) {
+                var a = [];
+                a = JSON.parse(localStorage.getItem(key));
+                a.push(prod)
+                console.log(a);
+                localStorage.setItem(key, JSON.stringify(a));
+                console.log(prod);
+            }
+            else {
+                setItem(key, [prod]);
+                console.log(prod);
+            }
+        })
+        const timer2 = () => {       
+            const random = new Promise((resolve, reject) => {            
+                setTimeout(() => {
+                    resolve(location.href= 'cart.html');
+                }, 1000);
+            });
+            return random;
         }
-        else {
-            setItem(key, [prod]);
-        }
-    }
+        timer2();
+    } 
+
 
     const getProducts = () => {
         const requestProducts = fetch(url);
@@ -24,7 +43,7 @@ const shop = (() => {
         });
     }
 
-    const getProduct = id => {
+    const getProduct = () => {
         const requestProducts = fetch(`${url}/${id}`);
         return requestProducts.then(response => {
             const r =response.json();
