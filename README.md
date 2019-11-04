@@ -8,7 +8,7 @@ Sitio web para agregar productos a un carrito de compras
 
 ## Temas
 * [BOM](https://www.arkaitzgarro.com/javascript/capitulo-14.html)
-* [DOM] (https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
+* [DOM](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
 * [Recuperar elementos](https://developer.mozilla.org/es/docs/Web/API/Document/getElementById)
 * [Crear elementos](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
 * [Funciones](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Funciones)
