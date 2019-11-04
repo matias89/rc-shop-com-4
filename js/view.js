@@ -278,7 +278,7 @@ const view = (shop => {
         
     }
     const diff = () => {
-        let productsInCart = shop.getItem();
+        let productsInCart = localStorage.getItem('productsInCart');
         console.log(productsInCart);
         if (productsInCart) {
             prodView();
@@ -287,7 +287,7 @@ const view = (shop => {
         }
     }
     return {
-         prodView,
+         diff,
          runSpinner,
          goPage,
          productDetail,

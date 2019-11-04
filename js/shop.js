@@ -21,7 +21,15 @@ const shop = (() => {
                 console.log(prod);
             }
         })
-        
+        const timer2 = () => {       
+            const random = new Promise((resolve, reject) => {            
+                setTimeout(() => {
+                    resolve(location.href= 'cart.html');
+                }, 1000);
+            });
+            return random;
+        }
+        timer2();
     } 
 
 
