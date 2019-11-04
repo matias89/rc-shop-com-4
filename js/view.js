@@ -288,6 +288,7 @@ const view = (shop => {
     }
     return {
          diff,
+         prodView,
          runSpinner,
          goPage,
          productDetail,
