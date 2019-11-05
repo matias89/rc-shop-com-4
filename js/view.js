@@ -308,7 +308,7 @@ const view = (shop => {
         cart_button.appendChild(containerDiv);
         
     }
-    const diff = () => {
+    const renderCartView = () => {
         let productsInCart = shop.getItem('productsInCart');
         if (productsInCart) {
             prodView();
@@ -317,7 +317,7 @@ const view = (shop => {
         }
     }
     return {
-         diff,
+         renderCartView,
          runSpinner,
          goPage,
          productDetail,
