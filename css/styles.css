@@ -1,0 +1,57 @@
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bg-trasparent-white-kino {
+    background-color: rgba(255,255,255, 0.3);
+}
+
+.image-kino {
+    width: 200px;
+    height: 200px;
+}
+
+.shadowCard{
+    color: black;
+}
+
+.shadowCard:hover{
+    box-shadow:  0px 5px 10px -7px black,0px -5px 10px -7px black;
+}
+
+.linkCard{
+    text-decoration: none;
+}
+
+.linkCard:hover{
+    text-decoration: none;
+}
+
+.price{
+    color: #E32C1F !important;
+}
+
+.bgHeader{
+    background: #FFCC98;
+    color: #E32C1F !important;
+}
+
+.bgHeader  div{
+    background: #FFCC98;
+    color: #E32C1F !important;
+    border-color: blanchedalmond;
+}
+
+.bgHeader a{
+    color: #E32C1F !important;
+}
+
+.bgFooter{
+    background: #FFE3B3;
+}
+
+.bgFooter span{
+    color: #E32C1F !important;
+}
