@@ -99,7 +99,7 @@ const view = (shop => {
             const carrousel = document.getElementById('detailCarrousel');
            
             for (let i = 0; i < prod.images.length; i++){
-                let itemClass = 'carrousel-item';
+                let itemClass = 'carousel-item';
                 if (i === 0) {
                     itemClass = itemClass + ' active';
                 }
@@ -229,39 +229,7 @@ const view = (shop => {
                 }
             }
         });
-        shopElement.appendChild(row);                
-    
-    
-        //const col2 = createElement('div', false, 'col-sm-6 col-md-3');
-        //const col3 = createElement('div', false, 'col-sm-6 col-md-3');
-        //const col4 = createElement('div', false, 'col-sm-6 col-md-3');
-        
-        //const card2 = createCard('Producto2', './images/products/tv.jpg', '$ 3000', 'Modelo2', './detail.html');
-        //const card3 = createCard('Producto3', './images/products/tv.jpg', '$ 4000', 'Modelo3', './detail.html');
-        //const card4 = createCard('Producto4', './images/products/tv.jpg', '$ 4000', 'Modelo4', './detail.html');
-        
-        //col2.appendChild(card2);
-        //col3.appendChild(card3);
-        //col4.appendChild(card4);
-        
-        //row.appendChild(col2);
-        //row.appendChild(col3);
-        //row.appendChild(col4);
-       /*    
-        const row2 = createElement('div', false, 'row my-2');   
-        const colH1 = createElement('div', false, 'col-md-4');
-        //const colH2 = createElement('div', false, 'col-md-4');
-        //const colH3 = createElement('div', false, 'col-md-4');
-        const cardH1 = createCardHor('Producto1', './images/products/tv.jpg', '$ 2000', 'Modelo1', './detail.html');
-        //const cardH2 = createCardHor('Producto2', './images/products/tv.jpg', '$ 3000', 'Modelo2', './detail.html');
-        //const cardH3 = createCardHor('Producto2', './images/products/tv.jpg', '$ 3000', 'Modelo2', './detail.html');
-        colH1.appendChild(cardH1);
-        //colH2.appendChild(cardH2);
-        //colH3.appendChild(cardH3);
-        row2.appendChild(colH1);
-        //row2.appendChild(colH2);
-        //row2.appendChild(colH3);
-        shopElement.appendChild(row2); */
+        shopElement.appendChild(row);     
     }
     // Vista en cart.html cuando hay productos cargados en el carrito
     const prodView = () => {
@@ -278,10 +246,10 @@ const view = (shop => {
             }
         ];
         const cart_button = document.getElementById('cart_button');
-        const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false);
-        const alertPrimary = createElement('div', 'alertPrimary', 'alert alert-primary text-center', false, );
-        const endShopBtn = createElement('button','endShopButton', 'btn btn-primary mx-4 my-2', '<span>Finalizar compra</span>', false, false, false, false, false, addEvent);
-        const contShopBtn = createElement('button', 'contShopBtn', 'btn btn-primary mx-4 my-2', '<span>Seguir comprando</span>', 'button', false, false, false, false, addEvent1);
+        const containerDiv = createElement('div', 'containerDiv', 'container h-75 mb-2', false, false, false, false, false, false);
+        const alertPrimary = createElement('div', 'alertPrimary', 'alert alert-danger text-center', false, );
+        const endShopBtn = createElement('button','endShopButton', 'btn btn-danger mx-4 my-2', '<span>Finalizar compra</span>', false, false, false, false, false, addEvent);
+        const contShopBtn = createElement('button', 'contShopBtn', 'btn btn-danger mx-4 my-2', '<span>Seguir comprando</span>', 'button', false, false, false, false, addEvent1);
         alertPrimary.appendChild(endShopBtn);
         alertPrimary.appendChild(contShopBtn);
         
