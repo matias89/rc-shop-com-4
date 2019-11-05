@@ -284,14 +284,48 @@ const view = (shop => {
             noProdView();
         }
     }
+    const viewCart = () => {
+        const productsRender = document.getElementById('Products-Render');
+        const rowProd = createElement('div', false, 'row', false, false) ;
+        const colProd1 = createElement('div',false, 'col');
+        const colProd2 = createElement('div',false, 'col');
+        const colProd3 = createElement('div',false, 'col');
+        const colProd4 = createElement('div',false, 'col');
+        const colProd5 = createElement('div',false, 'col');
+        const colProd6 = createElement('div',false, 'col');
+        const colProd7 = createElement('div',false, 'col');
+        const btnCart = createElement('button',false,'btn btn-danger','remove')
+        const imgProd = createElement('img',false,'h-25',false,false,false,'./images/cel55.jpg');
+        const textProd= createElement('p',false,false,'celular',false);
+        const inputProd= createElement('input',false,'form-control',false);
+        const priceProd = createElement('div',false,false,'$15000');
+        colProd5.appendChild(priceProd);
+        colProd4.appendChild(inputProd);
+        colProd3.appendChild(textProd);
+        colProd1.appendChild(btnCart);
+        rowProd.appendChild(colProd1);
+        colProd2.appendChild(imgProd);
+        rowProd.appendChild(colProd2);
+        rowProd.appendChild(colProd3);
+        rowProd.appendChild(colProd4);
+        rowProd.appendChild(colProd5);
+        rowProd.appendChild(colProd6);
+        rowProd.appendChild(colProd7);
+
+        productsRender.appendChild(rowProd);
+    }
     return {
          renderCartView,
          runSpinner,
          goPage,
          productDetail,
-         renderShop
+         renderShop,
+         viewCart
     }
 
 })(shop);
 
+//view.productDetail();
+// view.renderShop();
+view.viewCart();
 
