@@ -290,11 +290,18 @@ const view = (shop => {
     }
     // Vista en cart.html cuando no hay  productos guardados en el carrito
     const noProdView = () => {
+        const addEvent1 = [{
+            type: 'onclick',
+            fn: () => {
+                location.href= './index.html'
+            }
+            }
+        ];
         const cart_button = document.getElementById('cart_button');
         const containerDiv = createElement('div', 'containerDiv', 'container h-75', false, false, false, false, false, false);
         const alertDanger = createElement('div', 'alertDanger', 'alert alert-danger text-center');
         const alertTitle = createElement('h1', 'alertTitle', false, 'Alerta!!! No has cargado ningún producto');
-        const seeProdBtn = createElement('button', 'seeProdBtn', 'btn btn-primary w-50 align-middle', 'Ver productos', false, false, false, false, false, false);
+        const seeProdBtn = createElement('button', 'seeProdBtn', 'btn btn-primary w-50 align-middle', 'Ver productos', false, false, false, false, false, addEvent1);
         alertDanger.appendChild(alertTitle);
         alertDanger.appendChild(seeProdBtn);
         containerDiv.appendChild(alertDanger);
@@ -302,8 +309,7 @@ const view = (shop => {
         
     }
     const diff = () => {
-        let productsInCart = shop.getItem();
-        console.log(productsInCart);
+        let productsInCart = shop.getItem('productsInCart');
         if (productsInCart) {
             prodView();
         } else {
@@ -311,7 +317,7 @@ const view = (shop => {
         }
     }
     return {
-         prodView,
+         diff,
          runSpinner,
          goPage,
          productDetail,
@@ -320,5 +326,4 @@ const view = (shop => {
 
 })(shop);
 
-//view.productDetail();
-// view.renderShop();
+
