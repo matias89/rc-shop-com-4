@@ -311,13 +311,45 @@ const view = (shop => {
     const renderCartView = () => {
         let productsInCart = shop.getItem('productsInCart');
         if (productsInCart) {
+            listProduct(productsInCart);
             prodView();
         } else {
             noProdView();
         }
     }
-    const viewCart = () => {
+    const listProduct = (productsInCart) =>{
         const productsRender = document.getElementById('Products-Render');
+        for ( let i = 0;i < productsInCart.length; i++ ) {
+            const rowProd = createElement('div', false, 'row', false, false) ;
+            const colProd1 = createElement('div',false, 'col');
+            const colProd2 = createElement('div',false, 'col');
+            const colProd3 = createElement('div',false, 'col');
+            const colProd4 = createElement('div',false, 'col');
+            const colProd5 = createElement('div',false, 'col');
+            const colProd6 = createElement('div',false, 'col');
+            const colProd7 = createElement('div',false, 'col');
+            const btnCart = createElement('button',false,'btn btn-danger','remove')
+            const imgProd = createElement('img',false,'h-25',false,false,false,productsInCart[i]);
+            const textProd= createElement('p',false,false, productsInCart[i].title,false);
+            const inputProd= createElement('input',false,'form-control',false);
+            const priceProd = createElement('div',false,false,'$15000');
+            colProd5.appendChild(priceProd);
+            colProd4.appendChild(inputProd);
+            colProd3.appendChild(textProd);
+            colProd1.appendChild(btnCart);
+            rowProd.appendChild(colProd1);
+            colProd2.appendChild(imgProd);
+            rowProd.appendChild(colProd2);
+            rowProd.appendChild(colProd3);
+            rowProd.appendChild(colProd4);
+            rowProd.appendChild(colProd5);
+            rowProd.appendChild(colProd6);
+            rowProd.appendChild(colProd7);
+            productsRender.appendChild(rowProd);
+        }
+    }
+    const viewCart = () => {
+        
         const rowProd = createElement('div', false, 'row', false, false) ;
         const colProd1 = createElement('div',false, 'col');
         const colProd2 = createElement('div',false, 'col');
@@ -359,5 +391,5 @@ const view = (shop => {
 
 //view.productDetail();
 // view.renderShop();
-view.viewCart();
+//view.viewCart();
 

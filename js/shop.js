@@ -77,7 +77,7 @@ const shop = (() => {
         const products = getItem(key)
         return products;
     }
-    const getItem = (key) => {
+    const getItem = (productsInCart) => {
         let item = JSON.parse(localStorage.getItem(key));
         return item;
     }
