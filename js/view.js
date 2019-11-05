@@ -321,9 +321,11 @@ const view = (shop => {
         const colProd6 = createElement('div',false, 'col');
         const colProd7 = createElement('div',false, 'col');
         const btnCart = createElement('button',false,'btn btn-danger','remove')
-        const imgProd = createElement('img',false,'w-10 h-10',false,false,false,'./images/cel55.jpg');
+        const imgProd = createElement('img',false,'h-25',false,false,false,'./images/cel55.jpg');
         const textProd= createElement('p',false,false,'celular',false);
         const inputProd= createElement('input',false,'form-control',false);
+        const priceProd = createElement('div',false,false,'$15000');
+        colProd5.appendChild(priceProd);
         colProd4.appendChild(inputProd);
         colProd3.appendChild(textProd);
         colProd1.appendChild(btnCart);
