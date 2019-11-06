@@ -1,7 +1,3 @@
-.carousel-item > .view > img {
-    height: 400px;
-    margin: auto;
-}
 
 .main-footer ul {
     list-style: none;
@@ -32,8 +28,30 @@
 .linkCard:hover{
     text-decoration: none;
 }
-/* @media (min-width: 576px){
-    .row .btn-suscripcion {
-        display: none;
-    }
-} */
+
+.price{
+    color: #E32C1F !important;
+}
+
+.bgHeader{
+    background: #FFCC98;
+    color: #E32C1F !important;
+}
+
+.bgHeader  div{
+    background: #FFCC98;
+    color: #E32C1F !important;
+    border-color: blanchedalmond;
+}
+
+.bgHeader a{
+    color: #E32C1F !important;
+}
+
+.bgFooter{
+    background: #FFE3B3;
+}
+
+.bgFooter span{
+    color: #E32C1F !important;
+}
