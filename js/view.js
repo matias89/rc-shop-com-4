@@ -309,28 +309,28 @@ const view = (shop => {
         
     }
     const renderCartView = () => {
-        let productsInCart = shop.getItem('productsInCart');
-        if (productsInCart) {
-            listProduct(productsInCart);
+        let key = shop.getItem('key');
+        if ('key') {
+            listProduct('key');
             prodView();
         } else {
             noProdView();
         }
     }
-    const listProduct = (productsInCart) =>{
+    const listProduct = (key) =>{
         const productsRender = document.getElementById('Products-Render');
-        for ( let i = 0;i < productsInCart.length; i++ ) {
-            const rowProd = createElement('div', false, 'row', false, false) ;
-            const colProd1 = createElement('div',false, 'col');
-            const colProd2 = createElement('div',false, 'col');
-            const colProd3 = createElement('div',false, 'col');
-            const colProd4 = createElement('div',false, 'col');
-            const colProd5 = createElement('div',false, 'col');
-            const colProd6 = createElement('div',false, 'col');
-            const colProd7 = createElement('div',false, 'col');
+        for ( let i = 0;i < key.length; i++ ) {
+            const rowProd = createElement('div',false, 'row', false, false) ;
+            const colProd1 = createElement('div','', 'col');
+            const colProd2 = createElement('div','', 'col');
+            const colProd3 = createElement('div','', 'col');
+            const colProd4 = createElement('div','', 'col');
+            const colProd5 = createElement('div','', 'col');
+            const colProd6 = createElement('div','', 'col');
+            const colProd7 = createElement('div','', 'col');
             const btnCart = createElement('button',false,'btn btn-danger','remove')
-            const imgProd = createElement('img',false,'h-25',false,false,false,productsInCart[i]);
-            const textProd= createElement('p',false,false, productsInCart[i].title,false);
+            const imgProd = createElement('img',false,'h-25',false,false,false,key[i].prodImg[i].path);
+            const textProd= createElement('p',false,false, key[i].title,false);
             const inputProd= createElement('input',false,'form-control',false);
             const priceProd = createElement('div',false,false,'$15000');
             colProd5.appendChild(priceProd);
@@ -358,7 +358,7 @@ const view = (shop => {
         const colProd5 = createElement('div',false, 'col');
         const colProd6 = createElement('div',false, 'col');
         const colProd7 = createElement('div',false, 'col');
-        const btnCart = createElement('button',false,'btn btn-danger','remove')
+        const btnCart = createElement('button',false,'btn btn-danger mt-2 p-2','remove')
         const imgProd = createElement('img',false,'h-25',false,false,false,'./images/cel55.jpg');
         const textProd= createElement('p',false,false,'celular',false);
         const inputProd= createElement('input',false,'form-control',false);
@@ -384,7 +384,8 @@ const view = (shop => {
          goPage,
          productDetail,
          renderShop,
-         viewCart
+         viewCart,
+         listProduct
     }
 
 })(shop);
