@@ -317,9 +317,11 @@ const view = (shop => {
             noProdView();
         }
     }
-    const listProduct = (key) =>{
+    const listProduct = () =>{
+        let cardItem = shop.getItem();
         const productsRender = document.getElementById('Products-Render');
-        for ( let i = 0;i < key.length; i++ ) {
+        for ( let i = 0;i < cardItem.length; i++ ) {
+            const ProductItem = cardItem[i];
             const rowProd = createElement('div',false, 'row', false, false) ;
             const colProd1 = createElement('div','', 'col');
             const colProd2 = createElement('div','', 'col');
@@ -329,8 +331,8 @@ const view = (shop => {
             const colProd6 = createElement('div','', 'col');
             const colProd7 = createElement('div','', 'col');
             const btnCart = createElement('button',false,'btn btn-danger','remove')
-            const imgProd = createElement('img',false,'h-25',false,false,false,key[i].prodImg[i].path);
-            const textProd= createElement('p',false,false, key[i].title,false);
+            const imgProd = createElement('img',false,'h-25',false,false,false,cardItem.images[1]);
+            const textProd= createElement('p',false,false, cardItem.title,false);
             const inputProd= createElement('input',false,'form-control',false);
             const priceProd = createElement('div',false,false,'$15000');
             colProd5.appendChild(priceProd);
