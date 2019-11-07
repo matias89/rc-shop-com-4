@@ -57,20 +57,20 @@ const shop = (() => {
         const inLocalStoreProducts = getItem(key);
         for (let i = 0; i < inLocalStoreProducts.length; i++) {
             if (inLocalStoreProducts[i].id === itemId) {
-                inLocalStoreProducts[i].quantity = _quantity;
+                inLocalStoreProducts[i].quantity = parseInt(_quantity);
             }
         }
         setItem(key, inLocalStoreProducts);
     }
     // Borra productos en el carrito
-    const removeFromCart = (item) => {
+    const removeFromCart = (itemId) => {
         const inLocalStoreProducts = getItem(key);
-        for (let i = 0; i < LCproduct.lenght; i++) {
-            if (inLocalStoreProducts[i].id === item.id) {
+        for (let i = 0; i < inLocalStoreProducts.length; i++) {
+            if (inLocalStoreProducts[i].id === itemId) {
                 inLocalStoreProducts[i].splice(i, 1);
             }
         }
-        setItem(key, LCproduct);
+        setItem(key, inLocalStoreProducts);
     }
     // Verifica el proceso de finalizacion de compra
     const doCheckout = () => {
