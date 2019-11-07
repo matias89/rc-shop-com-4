@@ -51,7 +51,7 @@ const view = (shop => {
         }
     } 
 
-    const createElement = (element, id, className, html, type, placeholder, src, display, href, events) => {
+    const createElement = (element, id, className, html, type, placeholder, src, display, href, events, value) => {
         const elm = document.createElement(element);
 
         if (id) {
@@ -83,6 +83,9 @@ const view = (shop => {
                 const ev = events[i];
                 elm[ev.type] = ev.fn; // elm.onclick = () => { console.log('') }
             }
+        }
+        if (value) {
+            elm.value = value;
         }
         return elm
     }
@@ -333,7 +336,7 @@ const view = (shop => {
             const btnCart = createElement('button',false,'btn btn-danger','remove')
             const imgProd = createElement('img',false,'w-75',false,false,false,`./images/${cardItem[i].images[0].path}`);
             const textProd= createElement('p',false,false, cardItem[i].title,false);
-            const inputProd= createElement('input',false,'form-control',false, 'number',);
+            const inputProd= createElement('input',false,'form-control',false, 'number',false,false, false,false,false,1);
             inputProd.addEventListener('change',(event) => {
                 console.log('hola mundo!');
             })
@@ -389,7 +392,6 @@ const view = (shop => {
          goPage,
          productDetail,
          renderShop,
-         viewCart,
          listProduct
     }
 
