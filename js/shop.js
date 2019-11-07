@@ -3,7 +3,7 @@ const shop = (() => {
     const url = 'http://localhost:3000/products';
     //Funcion para agregar los productos al carrito 
     const addToCart = () => {
-        const prodRequest = getProduct();
+        const prodRequest = getProduct(id);
         prodRequest.then(prod => {
             // console.log(prod);
             prod.quantity = 1;
@@ -12,13 +12,13 @@ const shop = (() => {
                 var a = [];
                 a = JSON.parse(localStorage.getItem(key));
                 a.push(prod)
-                console.log(a);
+                // console.log(a);
                 localStorage.setItem(key, JSON.stringify(a));
-                console.log(prod);
+                // console.log(prod);
             }
             else {
                 setItem(key, [prod]);
-                console.log(prod);
+                // console.log(prod);
             }
         })
         const timer2 = () => {       
@@ -30,8 +30,7 @@ const shop = (() => {
             return random;
         }
         timer2();
-    } 
-
+    };
 
     const getProducts = () => {
         const requestProducts = fetch(url);
@@ -43,7 +42,8 @@ const shop = (() => {
         });
     }
 
-    const getProduct = () => {
+    const getProduct = id => {
+        console.log(id);
         const requestProducts = fetch(`${url}/${id}`);
         return requestProducts.then(response => {
             const r =response.json();
