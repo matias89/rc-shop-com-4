@@ -93,7 +93,7 @@ const view = (shop => {
     const productDetail = id => {
         const prodRequest = shop.getProduct(id);        
         prodRequest.then(prod => {
-            console.log(prod);
+            // console.log(prod);
             const addEvent = [{
                 type: 'onclick',
                 fn: shop.addToCart
@@ -311,10 +311,10 @@ const view = (shop => {
         cart_button.appendChild(containerDiv);
         
     }
-    const renderCartView = () => {
-        let key = shop.getItem('key');
-        if ('key') {
-            listProduct('key');
+    const renderAlertView = () => {
+        let key = shop.getItem();
+        if (key.length) {
+            listProduct();
             prodView();
         } else {
             noProdView();
@@ -333,13 +333,22 @@ const view = (shop => {
             const colProd5 = createElement('div','', 'col');
             const colProd6 = createElement('div','', 'col');
             const colProd7 = createElement('div','', 'col');
-            const btnCart = createElement('button',false,'btn btn-danger','remove')
+            const addEventRemove = [{
+                type: 'onclick',
+                fn: ev => {
+                    console.log('texto', typeof ev.target.value);
+                    shop.removeFromCart(ProductItem.id);
+                    console.log(location);
+                    location.href= "./cart.html"
+                }
+            }]
+            const btnCart = createElement('button',false,'btn btn-danger','remove', false, false, false, false, false, addEventRemove);
             const imgProd = createElement('img',false,'w-75',false,false,false,`./images/${cardItem[i].images[0].path}`);
             const textProd= createElement('p',false,false, cardItem[i].title,false);
             const addEventChange = [{
                 type: 'onchange',
                 fn: ev => {
-                    console.log('texto', typeof ev.target.value);
+                    // console.log('texto', typeof ev.target.value);
                     shop.modifyFromCart(ProductItem.id, ev.target.value);
                 }
             }]
@@ -391,7 +400,7 @@ const view = (shop => {
         productsRender.appendChild(rowProd);
     } */
     return {
-         renderCartView,
+         renderAlertView,
          runSpinner,
          goPage,
          productDetail,

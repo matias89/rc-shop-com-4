@@ -43,7 +43,7 @@ const shop = (() => {
     }
 
     const getProduct = id => {
-        console.log(id);
+        // console.log(id);
         const requestProducts = fetch(`${url}/${id}`);
         return requestProducts.then(response => {
             const r =response.json();
@@ -67,7 +67,8 @@ const shop = (() => {
         const inLocalStoreProducts = getItem(key);
         for (let i = 0; i < inLocalStoreProducts.length; i++) {
             if (inLocalStoreProducts[i].id === itemId) {
-                inLocalStoreProducts[i].splice(i, 1);
+                console.log(inLocalStoreProducts[i]);
+                inLocalStoreProducts.splice(i, 1);
             }
         }
         setItem(key, inLocalStoreProducts);
@@ -78,9 +79,9 @@ const shop = (() => {
         return products;
     }
     const getItem = () => {
-        console.log(key);
+        // console.log(key);
         let item = JSON.parse(localStorage.getItem(key));
-        console.log(item);
+        // console.log(item);
         return item;
     }
     const setItem = (key, value) => {
