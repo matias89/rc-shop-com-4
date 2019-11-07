@@ -285,7 +285,7 @@ const view = (shop => {
     }
     const renderAlertView = () => {
         let key = shop.getItem();
-        if (key.length) {
+        if (key && key.length) {
             listProduct();
             prodView();
         } else {
