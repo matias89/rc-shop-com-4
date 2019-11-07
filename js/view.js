@@ -318,7 +318,7 @@ const view = (shop => {
         }
     }
     const listProduct = () =>{
-        let cardItem = shop.getItem();
+        let cardItem = shop.getItem('productsInCart');
         const productsRender = document.getElementById('Products-Render');
         for ( let i = 0;i < cardItem.length; i++ ) {
             const ProductItem = cardItem[i];
@@ -331,10 +331,13 @@ const view = (shop => {
             const colProd6 = createElement('div','', 'col');
             const colProd7 = createElement('div','', 'col');
             const btnCart = createElement('button',false,'btn btn-danger','remove')
-            const imgProd = createElement('img',false,'h-25',false,false,false,cardItem.images[1]);
-            const textProd= createElement('p',false,false, cardItem.title,false);
-            const inputProd= createElement('input',false,'form-control',false);
-            const priceProd = createElement('div',false,false,'$15000');
+            const imgProd = createElement('img',false,'w-75',false,false,false,`./images/${cardItem[i].images[0].path}`);
+            const textProd= createElement('p',false,false, cardItem[i].title,false);
+            const inputProd= createElement('input',false,'form-control',false, 'number',);
+            inputProd.addEventListener('change',(event) => {
+                console.log('hola mundo!');
+            })
+            const priceProd = createElement('div',false,false,`$${cardItem[i].price}`);
             colProd5.appendChild(priceProd);
             colProd4.appendChild(inputProd);
             colProd3.appendChild(textProd);
@@ -350,7 +353,7 @@ const view = (shop => {
             productsRender.appendChild(rowProd);
         }
     }
-    const viewCart = () => {
+    /* const viewCart = () => {
         
         const rowProd = createElement('div', false, 'row', false, false) ;
         const colProd1 = createElement('div',false, 'col');
@@ -379,7 +382,7 @@ const view = (shop => {
         rowProd.appendChild(colProd7);
 
         productsRender.appendChild(rowProd);
-    }
+    } */
     return {
          renderCartView,
          runSpinner,
