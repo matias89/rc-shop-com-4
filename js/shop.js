@@ -53,14 +53,14 @@ const shop = (() => {
         });
     }
     // Modifica los productos en el carrito
-    const modifyFromCart = (item, _quantity) => {
+    const modifyFromCart = (itemId, _quantity) => {
         const inLocalStoreProducts = getItem(key);
-        for (let i = 0; i < inLocalStoreProducts.lenght; i++) {
-            if (inLocalStoreProducts[i].id === item.id) {
+        for (let i = 0; i < inLocalStoreProducts.length; i++) {
+            if (inLocalStoreProducts[i].id === itemId) {
                 inLocalStoreProducts[i].quantity = _quantity;
             }
         }
-        setItem(key, LCproduct);
+        setItem(key, inLocalStoreProducts);
     }
     // Borra productos en el carrito
     const removeFromCart = (item) => {
@@ -77,7 +77,7 @@ const shop = (() => {
         const products = getItem(key)
         return products;
     }
-    const getItem = (key) => {
+    const getItem = () => {
         console.log(key);
         let item = JSON.parse(localStorage.getItem(key));
         console.log(item);

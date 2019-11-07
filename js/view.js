@@ -321,7 +321,7 @@ const view = (shop => {
         }
     }
     const listProduct = () =>{
-        let cardItem = shop.getItem('productsInCart');
+        let cardItem = shop.getItem();
         const productsRender = document.getElementById('Products-Render');
         for ( let i = 0;i < cardItem.length; i++ ) {
             const ProductItem = cardItem[i];
@@ -336,10 +336,14 @@ const view = (shop => {
             const btnCart = createElement('button',false,'btn btn-danger','remove')
             const imgProd = createElement('img',false,'w-75',false,false,false,`./images/${cardItem[i].images[0].path}`);
             const textProd= createElement('p',false,false, cardItem[i].title,false);
-            const inputProd= createElement('input',false,'form-control',false, 'number',false,false, false,false,false,1);
-            inputProd.addEventListener('change',(event) => {
-                console.log('hola mundo!');
-            })
+            const addEventChange = [{
+                type: 'onchange',
+                fn: ev => {
+                    console.log('texto', typeof ev.target.value);
+                    shop.modifyFromCart(ProductItem.id, ev.target.value);
+                }
+            }]
+            const inputProd= createElement('input',false,'form-control',false, 'number', false, false, false,false, addEventChange,ProductItem.quantity);
             const priceProd = createElement('div',false,false,`$${cardItem[i].price}`);
             colProd5.appendChild(priceProd);
             colProd4.appendChild(inputProd);
