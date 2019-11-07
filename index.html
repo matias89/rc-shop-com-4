@@ -10,6 +10,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Rolling Shop</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bgHeader">
@@ -58,6 +59,15 @@
                         </div>
                     </li>
                 </ul>
+                <div class="btn-group">
+                    <a class="btn pointer" data-toggle="modal" data-target="#signinModal">
+                        SignIn
+                    </a>
+                    <a class="btn pointer" data-toggle="modal" data-target="#loginModal">
+                        LogIn
+                    </a>
+                </div>
+
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-ms-2 mr-2" type="search" placeholder="Buscar productos..."
                         aria-label="Search">
@@ -76,7 +86,8 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./images/products/Playstation 4.jpg" class="d-block w-100 img-fluid" alt="Responsive image">
+                    <img src="./images/products/Playstation 4.jpg" class="d-block w-100 img-fluid"
+                        alt="Responsive image">
                     <div
                         class="carousel-caption d-none d-md-block shadow-lg  bg-trasparent-white-kino rounded w-50 m-auto">
                         <h5 class="text-dark font-weight-bold text-center">Playstation 4</h5>
@@ -164,28 +175,158 @@
                         <img src="./images/carrito.png" width="70" height="70" alt="carrito de compra">
                     </a>
                 </div>
-                <p>Copyright 2001-2018 | Todos los derechos reservados RollingShop.com. RollingShop S.A.C.I. e I. Valentín Gómez
+                <p>Copyright 2001-2018 | Todos los derechos reservados RollingShop.com. RollingShop S.A.C.I. e I.
+                    Valentín Gómez
                     2813 (1191) | Capital Federal | Argentina
 
-                    Las fotos son a modo ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la
+                    Las fotos son a modo ilustrativo. La venta de cualquiera de los productos publicados está sujeta a
+                    la
                     verificación de stock. Los precios online y los planes de financiación para los productos
-                    presentados/publicados en www.rollingshop.com.ar y/o www.rollingshop.com son válidos exclusivamente para la
+                    presentados/publicados en www.rollingshop.com.ar y/o www.rollingshop.com son válidos exclusivamente
+                    para la
                     compra vía internet en las páginas antes mencionadas. Las especificaciones técnicas y descripciones
                     están sujetas a cambios sin previo aviso.
                 </p>
             </div>
         </div>
     </footer>
+
+    <!-- Modal de Inicio de sesion y creacion de cuenta / Tarea 2 - Header -->
+    <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal modal-dialog-centered" role="document">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="modal-body"">
+           <div class=" card bg-light">
+                                <article class="card-body mx-auto" style="max-width: 400px;">
+                                    <h4 class="card-title mt-3 text-center">Crear Cuenta</h4>
+                                    <p class="text-center">Empieza con tu cuenta gratuita</p>
+                                    <div class="social-login d-flex justify-content-center">
+                                        <button class="btn m-1 facebook-btn social-btn text-white" type="button">
+                                            <span><i class="fab fa-facebook-f"></i> </span>
+                                        </button>
+                                        <button class="btn m-1 google-btn social-btn text-white" type="button">
+                                            <span><i class="fab fa-google-plus-g"></i></span>
+                                        </button>
+                                    </div>
+                                    <p class="divider-text">
+                                        <span class="bg-light">O</span>
+                                    </p>
+                                    <form>
+                                        <div class="form-group input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-user"></i> </span>
+                                            </div>
+                                            <input name="" class="form-control" placeholder="Nombre" type="text">
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                            </div>
+                                            <input name="" class="form-control" placeholder="Email" type="email">
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-lock"></i> </span>
+                                            </div>
+                                            <input class="form-control" placeholder="Contraseña" type="password">
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-lock"></i> </span>
+                                            </div>
+                                            <input class="form-control" placeholder="Repita la Contraseña"
+                                                type="password">
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">
+                                                Crear Cuenta
+                                            </button>
+                                        </div>
+                                    </form>
+                                </article>
+                            </div> <!-- card.// -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Fin Modal de Inicio de sesion y creacion de cuenta / Tarea 2 - Header -->
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal modal-dialog-centered" role="document">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col align-self-center">
+                            <div class="modal-body">
+                                <div class="card bg-light">
+                                    <article class="card-body mx-auto" style="max-width: 400px;">
+                                        <h4 class="card-title mt-3 text-center">Entra con tu cuenta</h4>
+                                        <p class="text-center">Si ya tienes una cuenta, ingresa aquí</p>
+                                        <div class="social-login d-flex justify-content-center">
+                                            <button class="btn m-1 facebook-btn social-btn text-white" type="button">
+                                                <span><i class="fab fa-facebook-f"></i> </span>
+                                            </button>
+                                            <button class="btn m-1 google-btn social-btn text-white" type="button">
+                                                <span><i class="fab fa-google-plus-g"></i></span>
+                                            </button>
+                                        </div>
+                                        <p class="divider-text">
+                                            <span class="bg-light">O</span>
+                                        </p>
+                                        <form>
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"> <i class="fa fa-envelope"></i>
+                                                    </span>
+                                                </div>
+                                                <input name="" class="form-control" placeholder="Email" type="email">
+                                            </div>
+                                            <div class="form-group input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                                </div>
+                                                <input class="form-control" placeholder="Contraseña" type="password">
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">
+                                                    Entrar
+                                                </button>
+                                            </div>
+                                            <p class="text-center">No recuerdas la contraseña? <a href="">Recuperar
+                                                    Contraseña </a> </p>
+                                        </form>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Fin Modal de Inicio de sesion y creacion de cuenta / Tarea 2 - Header -->
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/23e52ac974.js"></script>
     <script type="text/javascript" src="./js/shop.js"></script>
     <script type="text/javascript" src="./js/view.js"></script>
     <script type="text/javascript">
-    view.renderShop();
+        view.renderShop();
     </script>
 </body>
 
