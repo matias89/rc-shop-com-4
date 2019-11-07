@@ -4,8 +4,10 @@ const view = (shop => {
         const btnfinish = document.getElementById('endShopButton');
         btnfinish.disabled = true;        
         const spinnerblock = document.getElementById('spinner');
+        const finishPurchaseAlert = document.getElementById('containerDiv');
+        finishPurchaseAlert.className = 'd-none';
         if (activeSpinner) {
-            spinnerblock.className ='spinner-border d-inline-block';            
+            spinnerblock.className ='spinner-border mb-3 text-danger d-inline-block'; 
             const t2 = timer();
             t2.then(numRnd => {              
               view.runSpinner(false);
@@ -36,6 +38,8 @@ const view = (shop => {
 
     const getMSG = typeMsg => { 
         let msg;
+        const containerBtn = document.getElementById('containerDiv');
+        containerBtn.className = 'container h-75 mb-2 d-inline-block';
         if (typeMsg) {
             msg = 'La compra se realizó con Exito.';
         } else {
@@ -327,5 +331,5 @@ const view = (shop => {
 
 //view.productDetail();
 // view.renderShop();
-view.viewCart();
+//view.viewCart();
 
