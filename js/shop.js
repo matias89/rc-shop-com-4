@@ -78,7 +78,9 @@ const shop = (() => {
         return products;
     }
     const getItem = () => {
+        console.log(key);
         let item = JSON.parse(localStorage.getItem(key));
+        console.log(item);
         return item;
     }
     const setItem = (key, value) => {
