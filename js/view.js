@@ -284,7 +284,7 @@ const view = (shop => {
         
     }
     const renderCartView = () => {
-        let key = shop.getItem('key');
+        let key = shop.getItem();
         if ('key') {
             listProduct('key');
             prodView();
