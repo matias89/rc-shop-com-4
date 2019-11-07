@@ -358,6 +358,6 @@ const view = (shop => {
 })(shop);
 
 //view.productDetail();
-// view.renderShop();
-view.viewCart();
+//view.renderShop();
+//view.viewCart();
 
