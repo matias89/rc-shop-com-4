@@ -13,16 +13,16 @@
 
 <body>
     <header>
-         <nav class="navbar navbar-expand-lg navbar-dark bgHeader">
-            <img src="./images/carrito.png" width="70" height="70">
+        <nav class="navbar navbar-expand-lg navbar-dark bgHeader">
+            <img src="./images/carrito.png" class="d-none d-sm-inline-block" width="70" height="70">
+            <a class="navbar-brand" href="./index.html">RollingShop</a>
+            <input class="form-control d-sm-none w-50" type="search" placeholder="Buscar productos...">
+            <!--button type="button" class="btn btn-outline-danger my-2 my-sm-0 d-sm-none d-sm-inline-block" type="submit">Buscar</button-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="./index.html">RollingShop</a>
-
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto my-lg-0">
-
                     <li class="nav-item active dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                             aria-haspopup="true" aria-expanded="false">Tv,Audio y Video.</a>
@@ -58,7 +58,7 @@
                             <a class="dropdown-item" href="#">Ver más.</a>
                         </div>
                     </li>
-                </ul>
+                </ul>                
                 <div class="btn-group">
                     <a class="btn pointer" data-toggle="modal" data-target="#signinModal">
                         SignIn
@@ -67,7 +67,7 @@
                         LogIn
                     </a>
                 </div>
-                <form class="form-inline my-2 my-lg-0">
+                <form class="form-inline my-2 my-lg-0 d-none d-sm-inline-block">
                     <input class="form-control mr-ms-2 mr-2" type="search" placeholder="Buscar productos..."
                         aria-label="Search">
                     <button type="button" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar</button>
@@ -76,50 +76,36 @@
         </nav>
     </header>
     <div class="container">
-
         <section id="cart_button">
-
             <div class="container p-2 mb-2">
                 <h2>Mi Carrito</h2>
             </div>
             <div id="Products-Render" class="container">
-                <!-- <div class="row">
-             <button onclick="" >Add My Cart</button>
-            <div class="col">foto</div>
-            <div class="col">descripcion</div>
-            <div class="col">boton quitar</div>
-            <div class="col">cantidad</div>
-            <div class="col">boton agregar</div>
-            <div class="col">precio</div>
-            <div class="col">eliminar</div> 
-        </div> -->
+              
             </div>
-
         </section>
-        <!-- Button trigger modal -->
-        <!-- Button trigger modal 
-        <button type="button" id="btn-finish" class="btn btn-primary d-inline-block" onclick="view.runSpinner(true);" >
-            Finalizar Compra
-        </button> -->
-        <!--spinner-->
         <div class="spinner-border d-none" id="spinner" role="status">
             <span class="sr-only">Loading...</span>
         </div>
+        <div class = 'container text-center'>
+            <div class="spinner-border d-none mb-2" style="width: 3rem; height: 3rem;" id="spinner" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>       
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Rolling Shop</h5>
-                        <button type="button" class="close" data-dismiss="modal">
-                            <span aria-hidden="true">&times;</span>
+                        <button type="button" class="close btn btn-danger" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body" id="modal-msg">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                            onclick="view.goPage();">Aceptar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="view.goPage();">Aceptar</button>
                     </div>
                 </div>
             </div>
