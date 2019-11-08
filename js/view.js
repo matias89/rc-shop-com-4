@@ -117,12 +117,12 @@ const view = (shop => {
             }           
             const titledetail = createElement('h1', 'td', 'bold', prod.title)
             const daddy = createElement ('div', 'daddy', 'container border border-danger my-2 p-3', false, false, false,false,false);
-            const title = createElement('h4', 'title', 'bold', 'General description',false, false, false, false);
+            const title = createElement('h4', 'title', 'bold', 'Descripción general', false, false, false, false);
             const description = createElement('p', 'description', false, prod.description, false, false, false, false);
             const button = createElement('button', 'addbutton', 'btn btn-danger', 'Add to Cart', 'submit', false, false, false, false, addEvent);
             const daddy1 = createElement('div', 'daddy1', 'container border border-danger my-2 p-3', false, false, false,false,false);
             const buttonContainer = createElement('div', false, 'container text-right mb-2', false, false, false,false,false);
-            const title1 = createElement('h4', 'title', 'bold', 'Specifications',false, false, false, false);
+            const title1 = createElement('h4', 'title', 'bold', 'Especificaciones',false, false, false, false);
             const ul = createElement('ul',false);
             const li1Content = `<h6 class="d-inline"> Inches: </h6> ${prod.features.inches}`;
             const li2Content = `<h6 class="d-inline"> Screen Type: </h6> ${prod.features.screenType}`;
