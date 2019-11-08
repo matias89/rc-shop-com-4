@@ -60,6 +60,9 @@
                 </ul>
                 
                 <div class="btn-group">
+                    <a href="cart.html" class="btn">
+                        Carrito
+                    </a>
                     <a class="btn pointer" data-toggle="modal" data-target="#signinModal">
                         SignIn
                     </a>
@@ -82,14 +85,14 @@
                 <h2>Mi Carrito</h2>
             </div>
             <div id="Products-Render" class="container">
-              
+
             </div>
         </section>
         <div class = 'container text-center'>
             <div class="spinner-border d-none my-2" style="width: 4rem; height: 4rem;" id="spinner" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div>       
+        </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -97,13 +100,14 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Rolling Shop</h5>
                         <button type="button" class="close btn btn-danger" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body" id="modal-msg">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="view.goPage();">Aceptar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"
+                            onclick="view.goPage();">Aceptar</button>
                     </div>
                 </div>
             </div>
