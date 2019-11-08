@@ -43,7 +43,11 @@ const shop = (() => {
     }
     
     // Verifica el proceso de finalizacion de compra
+<<<<<<< Updated upstream
     const doCheckout = () => {
+=======
+    const removeCartItems = () => {
+>>>>>>> Stashed changes
         localStorage.removeItem(key);
     }
     const isItInCart = (itemId) => {
@@ -51,7 +55,11 @@ const shop = (() => {
         const flag = false;
         for (let i = 0; i < inLocalStoreProducts.length; i++) {
             if (inLocalStoreProducts[i].id === itemId) return flag = true;
+<<<<<<< Updated upstream
             else return flag;
+=======
+            else return flag
+>>>>>>> Stashed changes
         }
     }
     //obtiene todos los productos del json
@@ -74,6 +82,17 @@ const shop = (() => {
                 return products;
             });
         });
+<<<<<<< Updated upstream
+=======
+    }
+    const timer2 = () => {       
+        const random = new Promise((resolve) => {            
+            setTimeout(() => {
+                resolve(location.href= 'cart.html');
+            }, 1000);
+        });
+        return random;
+>>>>>>> Stashed changes
     }
     const getItem = () => {
         // console.log(key);
