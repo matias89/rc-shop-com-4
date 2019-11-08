@@ -7,7 +7,7 @@ const view = (shop => {
         const finishPurchaseAlert = document.getElementById('containerDiv');
         finishPurchaseAlert.className = 'd-none';
         if (activeSpinner) {
-            spinnerblock.className ='spinner-border mb-3 text-danger d-inline-block'; 
+            spinnerblock.className ='spinner-border my-3 text-danger d-inline-block'; 
             const t2 = timer();
             t2.then(numRnd => {              
               view.runSpinner(false);
@@ -39,7 +39,7 @@ const view = (shop => {
     const getMSG = typeMsg => { 
         let msg;
         const containerBtn = document.getElementById('containerDiv');
-        containerBtn.className = 'container h-75 mb-2 d-inline-block';
+        containerBtn.className = 'container h-75 my-2 d-inline-block';
         if (typeMsg) {
             msg = 'La compra se realizó con Exito.';
         } else {
@@ -111,7 +111,7 @@ const view = (shop => {
                     itemClass = itemClass + ' active';
                 }
                 const itemCarrousel = createElement ('div', false, itemClass, false, false, false,false,false);
-                const itemImg = createElement('img', false, 'd-block w-100', false, false, false, `./images/${prod.images[i].path}`);
+                const itemImg = createElement('img', false, 'd-block w-75', false, false, false, `./images/${prod.images[i].path}`);
                 itemCarrousel.appendChild(itemImg);            
                 carrousel.appendChild(itemCarrousel);
             }           
@@ -119,18 +119,22 @@ const view = (shop => {
             const daddy = createElement ('div', 'daddy', 'container border border-danger my-2 p-3', false, false, false,false,false);
             const title = createElement('h4', 'title', 'bold', 'Descripción general', false, false, false, false);
             const description = createElement('p', 'description', false, prod.description, false, false, false, false);
-            const button = createElement('button', 'addbutton', 'btn btn-danger', 'Add to Cart', 'submit', false, false, false, false, addEvent);
+            const button = createElement('button', 'addbutton', 'btn btn-danger', 'Agregar al Carrito', 'submit', false, false, false, false, addEvent);
             const daddy1 = createElement('div', 'daddy1', 'container border border-danger my-2 p-3', false, false, false,false,false);
             const buttonContainer = createElement('div', false, 'container text-right mb-2', false, false, false,false,false);
             const title1 = createElement('h4', 'title', 'bold', 'Especificaciones',false, false, false, false);
+            const rowTitle = createElement('div', false, 'row');
+            const colDescription= createElement('div', false, 'col-9');
+            const colPrice = createElement('div', false, 'col-3');
+            const price = createElement('h3', false, 'card-text price', `Precio: $${prod.price}`);
             const ul = createElement('ul',false);
-            const li1Content = `<h6 class="d-inline"> Inches: </h6> ${prod.features.inches}`;
-            const li2Content = `<h6 class="d-inline"> Screen Type: </h6> ${prod.features.screenType}`;
-            const li3Content = `<h6 class="d-inline"> Resolution: </h6> ${prod.features.resolution}`;
-            const li4Content = `<h6 class="d-inline"> Weight: </h6> ${prod.features.weigth}`;
+            const li1Content = `<h6 class="d-inline"> Pulgadas: </h6> ${prod.features.inches}`;
+            const li2Content = `<h6 class="d-inline"> Tipo de pantalla: </h6> ${prod.features.screenType}`;
+            const li3Content = `<h6 class="d-inline"> Resolución: </h6> ${prod.features.resolution}`;
+            const li4Content = `<h6 class="d-inline"> Peso: </h6> ${prod.features.weigth}`;
             const li5Content = `<h6 class="d-inline"> Bluetooth: </h6> ${prod.features.Bluetooth}`;
             const li6Content = `<h6 class="d-inline"> WiFi: </h6> ${prod.features.WiFi}`;
-            const li7Content = `<h6 class="d-inline"> Guarantee: </h6> ${prod.features.guarantee}`;
+            const li7Content = `<h6 class="d-inline"> Garantía: </h6> ${prod.features.guarantee}`;
             const li1 = createElement('li', false, false, li1Content);
             const li2 = createElement('li',false, false, li2Content);
             const li3 = createElement('li',false, false, li3Content);
@@ -148,7 +152,12 @@ const view = (shop => {
             const detailtitle = document.getElementById('detailtitle');
             const features = document.getElementById('features');
             daddy.appendChild(title);
-            daddy.appendChild(description);
+            //daddy.appendChild(description);
+            colPrice.appendChild(price);
+            colDescription.appendChild(description);            
+            rowTitle.appendChild(colDescription);
+            rowTitle.appendChild(colPrice);
+            daddy.appendChild(rowTitle);
             daddy1.appendChild(title1);
             daddy1.appendChild(ul);
             features.appendChild(daddy);
@@ -156,6 +165,7 @@ const view = (shop => {
             features.appendChild(daddy1);
             buttonContainer.appendChild(button);
             features.appendChild(buttonContainer); 
+            
         }); 
     }  
     
@@ -253,7 +263,7 @@ const view = (shop => {
             }
         ];
         const cart_button = document.getElementById('cart_button');
-        const containerDiv = createElement('div', 'containerDiv', 'container h-75 mb-2', false, false, false, false, false, false);
+        const containerDiv = createElement('div', 'containerDiv', 'container h-75 my-2', false, false, false, false, false, false);
         const alertPrimary = createElement('div', 'alertPrimary', 'alert alert-danger text-center', false, );
         const endShopBtn = createElement('button','endShopButton', 'btn btn-danger mx-4 my-2', '<span>Finalizar compra</span>', false, false, false, false, false, addEvent);
         const contShopBtn = createElement('button', 'contShopBtn', 'btn btn-danger mx-4 my-2', '<span>Seguir comprando</span>', 'button', false, false, false, false, addEvent1);
@@ -297,7 +307,7 @@ const view = (shop => {
         const productsRender = document.getElementById('Products-Render');
         for ( let i = 0;i < cardItem.length; i++ ) {
             const ProductItem = cardItem[i];
-            const rowProd = createElement('div',false, 'row', false, false) ;
+            const rowProd = createElement('div',false, 'row border-bottom border-danger align-items-center', false, false) ;
             const colProd1 = createElement('div','', 'col');
             const colProd2 = createElement('div','', 'col');
             const colProd3 = createElement('div','', 'col');
@@ -314,7 +324,7 @@ const view = (shop => {
                     location.href= "./cart.html"
                 }
             }]
-            const btnCart = createElement('button',false,'btn btn-danger','remove', false, false, false, false, false, addEventRemove);
+            const btnCart = createElement('button',false,'btn btn-danger','Eliminar', false, false, false, false, false, addEventRemove);
             const imgProd = createElement('img',false,'w-75',false,false,false,`./images/${cardItem[i].images[0].path}`);
             const textProd= createElement('p',false,false, cardItem[i].title,false);
             const addEventChange = [{
@@ -329,15 +339,13 @@ const view = (shop => {
             colProd5.appendChild(priceProd);
             colProd4.appendChild(inputProd);
             colProd3.appendChild(textProd);
-            colProd1.appendChild(btnCart);
-            rowProd.appendChild(colProd1);
+            colProd1.appendChild(btnCart);            
             colProd2.appendChild(imgProd);
             rowProd.appendChild(colProd2);
             rowProd.appendChild(colProd3);
             rowProd.appendChild(colProd4);
             rowProd.appendChild(colProd5);
-            rowProd.appendChild(colProd6);
-            rowProd.appendChild(colProd7);
+            rowProd.appendChild(colProd1);
             productsRender.appendChild(rowProd);
         }
     }
@@ -349,6 +357,7 @@ const view = (shop => {
          productDetail,
          renderShop,
          listProduct
+         //,renderCartView,
     }
 
 })(shop);

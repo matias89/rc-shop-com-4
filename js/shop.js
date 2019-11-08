@@ -5,20 +5,16 @@ const shop = (() => {
     const addToCart = () => {
         const prodRequest = getProduct(id);
         prodRequest.then(prod => {
-            // console.log(prod);
             prod.quantity = 1;
             let local = localStorage.getItem(key);
             if (local) {
                 var a = [];
                 a = JSON.parse(localStorage.getItem(key));
                 a.push(prod)
-                // console.log(a);
                 localStorage.setItem(key, JSON.stringify(a));
-                // console.log(prod);
             }
             else {
                 setItem(key, [prod]);
-                // console.log(prod);
             }
         })
         const timer2 = () => {       
