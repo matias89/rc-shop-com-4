@@ -1,8 +1,8 @@
 const shop = (() => {
     const key = 'productsInCart'
     const url = 'http://localhost:3000/products';
-    //Funcion para agregar los productos al carrito 
-    const addToCart = (itemID) => {
+    //Adds item to cart
+    const addToCart = itemId => {
         const prodRequest = getProduct(id);
         prodRequest.then(prod => {
             prod.quantity = 1;
@@ -19,8 +19,7 @@ const shop = (() => {
         })
         timer2();
     };
-    const 
-    // Modifica los productos en el carrito
+    // Modifies item quantity on cart and updates localstorage
     const modifyFromCart = (itemId, _quantity) => {
         const inLocalStoreProducts = getItem(key);
         for (let i = 0; i < inLocalStoreProducts.length; i++) {
@@ -30,8 +29,8 @@ const shop = (() => {
         }
         setItem(key, inLocalStoreProducts);
     }
-    // Borra productos en el carrito
-    const removeFromCart = (itemId) => {
+    // Removes an item from cart
+    const removeFromCart = itemId => {
         const inLocalStoreProducts = getItem(key);
         for (let i = 0; i < inLocalStoreProducts.length; i++) {
             if (inLocalStoreProducts[i].id === itemId) {
@@ -41,78 +40,56 @@ const shop = (() => {
         }
         setItem(key, inLocalStoreProducts);
     }
-    
-    // Verifica el proceso de finalizacion de compra
-<<<<<<< Updated upstream
+    // clears items kept in localstorage 
     const doCheckout = () => {
-=======
-    const removeCartItems = () => {
->>>>>>> Stashed changes
         localStorage.removeItem(key);
     }
-    const isItInCart = (itemId) => {
+    const isItInCart = itemId => {
         const inLocalStoreProducts = getItem(key);
         const flag = false;
         for (let i = 0; i < inLocalStoreProducts.length; i++) {
             if (inLocalStoreProducts[i].id === itemId) return flag = true;
-<<<<<<< Updated upstream
             else return flag;
-=======
-            else return flag
->>>>>>> Stashed changes
         }
     }
-    //obtiene todos los productos del json
+    //get all products from json file
     const getProducts = () => {
         const requestProducts = fetch(url);
         return requestProducts.then(response => {
-            const r =response.json();
+            const r = response.json();
             return r.then(products => {
                 return products;
             });
         });
     }
-    //obtiene un producto especifico del json
+    //get the specified item from json file
     const getProduct = id => {
         // console.log(id);
         const requestProducts = fetch(`${url}/${id}`);
         return requestProducts.then(response => {
-            const r =response.json();
+            const r = response.json();
             return r.then(products => {
                 return products;
             });
         });
-<<<<<<< Updated upstream
-=======
-    }
-    const timer2 = () => {       
-        const random = new Promise((resolve) => {            
-            setTimeout(() => {
-                resolve(location.href= 'cart.html');
-            }, 1000);
-        });
-        return random;
->>>>>>> Stashed changes
     }
     const getItem = () => {
-        // console.log(key);
         let item = JSON.parse(localStorage.getItem(key));
-        // console.log(item);
         return item;
     }
     const setItem = (key, value) => {
         let item = JSON.stringify(value);
         localStorage.setItem(key, item);
     }
-    const timer2 = () => {       
-        const random = new Promise((resolve) => {            
+    const timer2 = () => {
+        const random = new Promise((resolve) => {
             setTimeout(() => {
-                resolve(location.href= 'cart.html');
+                resolve(location.href = 'cart.html');
             }, 1000);
         });
         return random;
     }
-    
+
     return {
         addToCart,
         modifyFromCart,
