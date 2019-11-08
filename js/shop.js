@@ -2,7 +2,7 @@ const shop = (() => {
     const key = 'productsInCart'
     const url = 'http://localhost:3000/products';
     //Adds item to cart
-    const addToCart = itemId => {
+    const addToCart = () => {
         const prodRequest = getProduct(id);
         prodRequest.then(prod => {
             prod.quantity = 1;
