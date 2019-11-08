@@ -7,7 +7,7 @@ const view = (shop => {
         const finishPurchaseAlert = document.getElementById('containerDiv');
         finishPurchaseAlert.className = 'd-none';
         if (activeSpinner) {
-            spinnerblock.className ='spinner-border mb-3 text-danger d-inline-block'; 
+            spinnerblock.className ='spinner-border my-3 text-danger d-inline-block'; 
             const t2 = timer();
             t2.then(numRnd => {              
               view.runSpinner(false);
@@ -39,7 +39,7 @@ const view = (shop => {
     const getMSG = typeMsg => { 
         let msg;
         const containerBtn = document.getElementById('containerDiv');
-        containerBtn.className = 'container h-75 mb-2 d-inline-block';
+        containerBtn.className = 'container h-75 my-2 d-inline-block';
         if (typeMsg) {
             msg = 'La compra se realizó con Exito.';
         } else {
