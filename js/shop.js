@@ -43,7 +43,7 @@ const shop = (() => {
     }
 
     const getProduct = id => {
-        console.log(id);
+        // console.log(id);
         const requestProducts = fetch(`${url}/${id}`);
         return requestProducts.then(response => {
             const r =response.json();
@@ -53,24 +53,25 @@ const shop = (() => {
         });
     }
     // Modifica los productos en el carrito
-    const modifyFromCart = (item, _quantity) => {
+    const modifyFromCart = (itemId, _quantity) => {
         const inLocalStoreProducts = getItem(key);
-        for (let i = 0; i < inLocalStoreProducts.lenght; i++) {
-            if (inLocalStoreProducts[i].id === item.id) {
-                inLocalStoreProducts[i].quantity = _quantity;
+        for (let i = 0; i < inLocalStoreProducts.length; i++) {
+            if (inLocalStoreProducts[i].id === itemId) {
+                inLocalStoreProducts[i].quantity = parseInt(_quantity);
             }
         }
-        setItem(key, LCproduct);
+        setItem(key, inLocalStoreProducts);
     }
     // Borra productos en el carrito
-    const removeFromCart = (item) => {
+    const removeFromCart = (itemId) => {
         const inLocalStoreProducts = getItem(key);
-        for (let i = 0; i < LCproduct.lenght; i++) {
-            if (inLocalStoreProducts[i].id === item.id) {
-                inLocalStoreProducts[i].splice(i, 1);
+        for (let i = 0; i < inLocalStoreProducts.length; i++) {
+            if (inLocalStoreProducts[i].id === itemId) {
+                console.log(inLocalStoreProducts[i]);
+                inLocalStoreProducts.splice(i, 1);
             }
         }
-        setItem(key, LCproduct);
+        setItem(key, inLocalStoreProducts);
     }
     // Verifica el proceso de finalizacion de compra
     const doCheckout = () => {
@@ -78,9 +79,9 @@ const shop = (() => {
         return products;
     }
     const getItem = () => {
-        console.log(key);
+        // console.log(key);
         let item = JSON.parse(localStorage.getItem(key));
-        console.log(item);
+        // console.log(item);
         return item;
     }
     const setItem = (key, value) => {
