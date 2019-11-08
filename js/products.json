@@ -1,6 +1,6 @@
 {
   "products": [{
-  "title": "Categoria: Celular",
+  "title": "Celular",
   "id": 1,
   "model": "Galaxy Note10 | 10+",
   "description": "El celular libre Samsung Galaxy Note 10+ SM-N975F aura glow de 6.7\" con una resolución de pantalla Dynamic AMOLED 2280 x 1080 (FHD+). Funciona con sistema operativo Android 9. Procesador de Exynos Octa-core 2x2.73 GHz Mongoose M4 & 2x2.4 GHz Cortex-A75 & 4x1.9 GHz Cortex-A55. Almacenamiento de 512 GB. Con cámara principal de 10 MP, cámara secundaria de 12+12+16+ToF MP. Video UHD 4K (3840 x 2160)@60fps.",
@@ -30,7 +30,7 @@
   ]
 },
 {
-  "title": "Categoria: Celular",
+  "title": "Celular",
   "id": 2,
   "model": "Samsung s10",
   "description": "Completamente rediseñado para eliminar las interrupciones de tu vista. Sin notch, sin distracciones. El corte láser preciso, la seguridad en la pantalla y un AMOLED dinámico que es fácil de usar hacen que la pantalla Infinity-O Display del Galaxy sea la más innovadora hasta el momento.",
@@ -60,7 +60,7 @@
   ]
 },
 {
-  "title": "Categoria: Celular",
+  "title": "Celular",
   "id": 3,
   "model": "Samsung A90",
   "description": "El Galaxy A90 cambia tu forma de documentar la vida. La cámara triple se desliza y gira para captar lo que está pasando por delante y por detrás. Ahora tenés una cámara que captura a ambos lados para captar todos tus momentos. La cámara construida para Live. No solo para selfies",
@@ -90,7 +90,7 @@
   ]
 },
 {
-  "title": "Categoria: Celular",
+  "title": "Celular",
   "id": 4,
   "model": "Samsung A80",
   "description": "Liberado. Pantalla Super AMOLED de 6.7\". Cámaras traseras de 48Mpx/8Mpx/0.04Mpx.Cámaras delanteras de 48Mpx/8Mpx 0.04Mpx. Procesador Snapdragon 730 Octa-Core de 2.2GHz con 8GB de RAM. Batería de 3700mAh.Memoria interna de 128GB.Sistema operativo Android 9.0 Pie. Con sensor de huella dactilar.",
@@ -120,9 +120,9 @@
   ]
 },
 {
-  "title": "Categoria: Celular",
+  "title": "Celular",
   "id": 5,
-  "model": "Nokia 7.1",
+  "model": "Nokia N7.1 sistema operativo Android 8.1. ",
   "description": "Celular libre N7.1 azul 64GB 4GB RAM: Smartphones Nokia modelo N7.1 AZUL con sistema operativo Android 8.1. Dentro de sus especificaciones se encuentran una memoria interna de 64GB y una cámara frontal de 8MP y posterior de 12MP+ 5MP.",
   "features": {
     "inches": 5.84,
@@ -146,7 +146,7 @@
   ]
 },
     {
-      "title": "Categotria: Smart TV",
+      "title": "Smart TV",
       "id": 6,
       "model": "SMART TV 4K UHD SONY 75 XBR-75X805G",
       "description": "Smart TV. Pantalla 32\" Resolución 1366x768. Contraste 3000:1. Frecuencia de refresco 60Hz. Potencia 10W. HDMI x 2. USB. A/V. Sintonizador Digital TDA. WiFi. Video compuesto. Video por componentes.",
@@ -176,7 +176,7 @@
       ]
     },
     {
-      "title": "Categotria: Smart TV",
+      "title": "Smart TV",
       "id": 7,
       "model": "Sony Smart Tv 645 Pulgadas Xbr65a8g",
       "description": "Smart TV OLED (Android TV) 65\" 4K. HDR UHD (3840 x 2160). Potencia 10w + 10w. Sonido Dolby, DTS Digital Surround,Clear Audio+. Wi Fi. HDMI x 4. Bluetooth 4.1. USB x 3. Soporte de sobremesa, Baterías, control remoto, instrucciones, cable de alimentación.",
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "title": "Categotria: Smart TV",
+      "title": "Smart TV",
       "id": 8,
       "model": "Sony Smart Tv 75 Pulgadas Xbr75x805g Ar4",
       "description": "Smart TV (Android TV) 75\" 4K HDR UHD (3840 x 2160). Potencia 10w + 10w. Sonido Dolby, DTS Digital Surround,Clear Audio+. Wi Fi. HDMI x 4. Bluetooth 4.1. USB x 3. Soporte de sobremesa, Baterías, control remoto, instrucciones, cable de alimentación.",
@@ -230,7 +230,7 @@
       ]
     },
     {
-      "title": "Categotria: Notebook",
+      "title": "Notebook",
       "id": 9,
       "model": "Notebook HP GAMER 15 DC0052LA INTEL CORE I5",
       "description": "Proc.8va Gen.Intel Core i5-8300H QC 2.3Ghz. Mem.RAM 8Gb DDR4. Disco duro 1Tb Sata. Pant.LED 15.6\"FHD. Wi-Fi/Bluetooth 5 combinado. Gráficos Nividia GeForce GTX1050 Ti. Webcam HD c/2 micróf.dig.integ. Sonido Bang & Olufsen. SO Windows 10 Home.",
@@ -256,7 +256,7 @@
       ]
     },
     {
-      "title": "Categotria: Notebook",
+      "title": "Notebook",
       "id": 10,
       "model": "Notebook LENOVO 81LK007GAR INTEL CORE I5",
       "description": "Proc.Intel Core I5-9300H. Mem.RAM 8Gb DDR4. Disco duro 1Tb. Pant.15.6\"FHD IPS. Gráficos GTX1050 3GB G5 96B. Webcam HD 720p. Wi-Fi. Bluetooth 4. HDMI. USB 3.0X2 y 1 tipo C. Teclado iluminado.SO Windows 10 Home High End Em",
@@ -286,9 +286,9 @@
       ]
     },
     {
-      "title": "Categotria: Notebook",
+      "title": "Notebook",
       "id": 11,
-      "model": "Notebook DELL INSPIRON 3583 INTEL CORE I7 8A. GENERACIóN",
+      "model": "Notebook DELL INSPIRON 3583 INTEL CORE I7 8A.",
       "description": "Proc. Intel Core I7-8550U. Vel.proc. 1.8Ghz. Pantalla FHD 15.6\". S.O. Windows 10 Home. Cap. 1Tb / RAM 8Gb. Placa de video NVIDIA GeForce. Lector de tarjetas. Wi Fi. Bluetooth. USB. HDMI. Conector combinado Aur/Mic. Camara web c/mic. inc. Bat.3celdas 41W",
       "features": {
         "inches": 15.6,
@@ -316,14 +316,14 @@
       ]
     },
     {
-      "title": "Categotria: Gaming",
+      "title": "Gaming",
       "id": 12,
-      "model": "Consolas De Video Juegos Sony Consola Ps4 Cuh2215b 1 Tb",
+      "model": "Consolas De Video Sony Consola Ps4 1 Tb",
       "description": "Slim. 1 Tb. Control inalambrico. Cable HDMI. Cable de alimentacion. Auricular monoaural c/cable. CAble USB de carga. Juegos ( Days Gone - Detroit: Become Human - Tom Clancy´s Rainbow Six ). Cupon de contenido descargable.",
       "features": {
-        "inches": false,
-        "screenType": false,
-        "resolution": false,
+        "inches":   "-",
+        "screenType":   "-",
+        "resolution":   "-",
         "weigth": 42.72,
         "Bluetooth": "SI",
         "WiFi": "INTEGRADO",
@@ -346,14 +346,14 @@
       ]
     },
     {
-      "title": "Categotria: Gaming",
+      "title": "Gaming",
       "id": 13,
-      "model": "Consolas De Video Juegos Microsoft Consola Xbox One S Xbox One S 1tb All Digedes A 1 Tb",
+      "model": "Consolas De Video Juegos Xbox One S 1tb All Digedes",
       "description": "No reproduce discos físicos. Los juegos son descargados y están listos para jugar en cualquier momento. Incluye: Consola Xbox One S de 1TN Edición All-Digital (juego sin disco), control inalambrico, suscripción de Xbox Live Gold por un mes.",
       "features": {
-        "inches": false,
-        "screenType": false,
-        "resolution": false,
+        "inches":   "-",
+        "screenType":   "-",
+        "resolution":   "-",
         "weigth": 3,
         "Bluetooth": "SI",
         "WiFi": "INTEGRADO",
@@ -372,14 +372,14 @@
       ]
     },
     {
-      "title": "Categotria: Gaming",
+      "title": "Gaming",
       "id": 14,
       "model": "Varios Logitech Volante Driving Force G920",
       "features": {
-        "inches": false,
-        "screenType": false,
-        "resolution": false,
-        "weigth": false,
+        "inches":   "-",
+        "screenType":   "-",
+        "resolution":   "-",
+        "weigth":   "-",
         "Bluetooth": "SI",
         "WiFi": "INTEGRADO",
         "guarantee": "24 MESES"
@@ -397,15 +397,15 @@
       ]
     },
     {
-      "title": "Categotria: Gaming",
+      "title": "Gaming",
       "id": 15,
       "model": "Juegos Ps4 Activision Juego Ps4 0",
       "description": "Este producto no posee una descripción",
       "features": {
-        "inches": false,
-        "screenType": false,
-        "resolution": false,
-        "weigth": false,
+        "inches":   "-",
+        "screenType":   "-",
+        "resolution":   "-",
+        "weigth":   "-",
         "Bluetooth": "SI",
         "WiFi": "INTEGRADO",
         "guarantee": "12 MESES"
@@ -427,9 +427,9 @@
       ]
     },
     {
-      "title": "Categotria: Tablet",
+      "title": "Tablet",
       "id": 16,
-      "model": "Tablet Samsung",
+      "model": "Tablet Samsung pantalla multitáctil de 10.1 FullHD",
       "description": "Disfrutá de un mayor rendimiento, capturá tus momentos y conectate a los diferentes dispositivos a través de la Tablet Wave. Con un moderno diseño y una pantalla multitáctil de 10.1 FullHD, esta Tablet te acompaña en toda actividad. Posee cámara frontal y trasera, junto con una memoria de almacenamiento de 16 GB lo cual permite que guardes todos tus recuerdos",
       "features": {
         "inches": 16.7,
@@ -457,7 +457,7 @@
       ]
     },
     {
-      "title": "Categotria: Tablet",
+      "title": "Tablet",
       "id": 17,
       "model": "Tablets Lenovo Tablet Tb7104f Black 7 8 Gb Negro",
       "description": "Tablet Lenovo con pantalla de 7 pulgadas camara frontal de 0 3 MP y trasera de 2 MP. Sistema operativo Android.",
@@ -483,7 +483,7 @@
       ]
     },
     {
-      "title": "Categotria: Tablet",
+      "title": "Tablet",
       "id": 18,
       "model": "Tablets Exo Tablet Wave I007 7 16 Gb",
       "description": "Moderna y súper divertida una Tablet que te hara disfrutar de lo que mas deseas. Sistema Operativo: Android 6 Marshmallow Procesador: Rockchip Rk3126 Quad Core. Memoria: 1 GB. Almacenamiento: 8 GB.Pantalla: Touch 7? resolución 1024 x 600. Cámara: Doble Cámara. Frontal VGA / Trasera VGA Bluetooth. Lector de tarjetas. Wi-Fi. Giroscopio. Batería: 2000 mAh.",
@@ -509,7 +509,7 @@
       ]
     },
     {
-      "title": "Categotria: Tablet",
+      "title": "Tablet",
       "id": 19,
       "model": "Tablets Sansei Tablet Ts7a1 7 8 Gb Negro",
       "description": "Este producto no posee una descripción",

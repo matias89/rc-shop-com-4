@@ -117,7 +117,7 @@ const view = (shop => {
             }           
             const titledetail = createElement('h1', 'td', 'bold', prod.title)
             const daddy = createElement ('div', 'daddy', 'container border border-danger my-2 p-3', false, false, false,false,false);
-            const title = createElement('h4', 'title', 'bold', 'Descripción General',false, false, false, false);
+            const title = createElement('h4', 'title', 'bold', 'Descripción general', false, false, false, false);
             const description = createElement('p', 'description', false, prod.description, false, false, false, false);
             const button = createElement('button', 'addbutton', 'btn btn-danger', 'Agregar al Carrito', 'submit', false, false, false, false, addEvent);
             const daddy1 = createElement('div', 'daddy1', 'container border border-danger my-2 p-3', false, false, false,false,false);
